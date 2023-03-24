@@ -23,7 +23,7 @@ const activities = [
 </script>
 
 <template>
-    <div class=" min-h-[100vh]">
+    <div class=" min-h-[100vh] p-4">
         <div class="max-w-[840px] mx-auto">
             <nav class="min-h-[80px] py-3">
                 <div class="flex items-center mb-8">
