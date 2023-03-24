@@ -172,7 +172,8 @@ const activities = [
 }
 
 .box-card {
-    width: 480px;
+    max-width: 480px;
+    width: 100%;
 }
 </style>
   
