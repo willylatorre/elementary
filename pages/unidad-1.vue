@@ -2,7 +2,7 @@
     <div>
         <nav class="min-h-[60px] py-3">
             <div class="flex items-center">
-                <img src="./assets/img/logo.svg" width="180" alt="elementary logo" />
+                <img src="../assets/img/logo.svg" width="180" alt="elementary logo" />
             </div>
 
             <!-- <el-menu :default-active="activeIndex" class="el-menu-demo mt-4" mode="horizontal" @select="handleSelect"
