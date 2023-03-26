@@ -41,7 +41,7 @@
                 por Anna Gallart.
             </p>
 
-            <div class="grid grid-cols-2 gap-4 mt-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:mt-6">
                 <el-card class="profile-card" shadow="hover">
                     <template #header>
                         <div class="card-header">
@@ -91,14 +91,14 @@
 
 
 
-            <div class="flex flex-col relative">
-                <div class="on-top ml-[48%]">
+            <div class="flex flex-col-reverse relative">
+                <div class="on-top mt-4 md:mt-0 md:ml-[48%]">
                     <h2>
                         somos <br />
                         <span class="high">ALUMNOS</span>
                     </h2>
-                    <div class="bg-bg rounded-tl-lg pl-4">
-                        <p class="text-dark max-w-[400px] hero-sub">
+                    <div class="bg-bg md:rounded-tl-[76px] md:pl-7 md:pt-3 md:mt-[-12px]">
+                        <p class="">
                             En
                             <span class="font-serif font-bold font-dark">somos TRIANA</span>, nuestros alumnos son una parte
                             esencial del proceso.
