@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: 'Poppins, Helvetica, Arial, sans-serif';
+    color: theme('colors.dark')
+}
+
+h1 {
+    font-family: 'Noto Serif';
+    font-weight: 700;
+    width: 100%;
+    position: relative;
+    padding-left: 180px;
+    font-size: 3rem;
+    margin-bottom: 48px;
+
+    span {
+        color: theme('colors.primary');
+        font-size: 7rem;
+        line-height: 70px;
+    }
+
+    :after {
+        content: " ";
+        display: block;
+        height: 2px;
+        width: 130px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: theme('colors.primary');
+    }
+
+    @media(max-width: 600px) {
+        font-size: 2rem;
+        padding-left: 56px;
+
+        span {
+            font-size: 3rem;
+            line-height: 1rem;
+        }
+
+        :after {
+            width: 40px;
+        }
+    }
+}
+
+h2 {
+    font-family: 'Noto Serif';
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 48px;
+    padding-left: 120px;
+    display: inline-block;
+
+    span {
+        color: theme('colors.primary');
+        font-size: 48px;
+        line-height: 40px;
+    }
+
+    :after {
+        content: " ";
+        display: block;
+        height: 2px;
+        width: 100px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: theme('colors.primary');
+    }
+
+    @media(max-width: 600px) {
+
+        span {}
+
+        :after {
+            width: 40px;
+        }
+    }
+}
+
+h2.inverted {
+    padding-right: 140px;
+
+    :after {
+        content: " ";
+        display: block;
+        height: 2px;
+        width: 130px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: auto;
+        background: theme('colors.primary');
+    }
+
+    span {
+        color: theme('colors.primary');
+        font-size: 48px;
+        line-height: 40px;
+    }
+
+
+
+    @media(max-width: 600px) {
+
+        span {
+            font-size: 3rem;
+            line-height: 1rem;
+        }
+
+        :after {
+            width: 40px;
+        }
+    }
+}
+
+section {
+    margin-bottom: 96px;
+
+    @media(max-width: 600px) {
+        margin-bottom: 48px;
+    }
+}
+
+.high {
+    font-family: 'Noto Serif';
+    font-weight: 700;
+}
+
+p {
+    padding: 12px 0;
+}
+
+.profile-card {
+    background-color: theme('colors.secondary') !important;
+    border: 1px solid theme('colors.primary') !important;
+    border-radius: 6px 24px 6px 24px !important;
+    opacity: 0.7;
+    // transition: all 0.2s ease-in;
+
+    &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    :deep(.el-card__header) {
+        border: 0 !important;
+        padding-bottom: 0;
+    }
+}
+
+.dash {
+    width: 12px;
+    height: 16px;
+    border-bottom: 1px solid theme('colors.primary');
+    margin-top: -50%;
+    display: inline-block;
+    margin-right: 6px;
+
+}
