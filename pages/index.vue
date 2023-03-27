@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="relative">
         <section class="hero flex flex-col relative">
-            <div class="on-top max-w-[640px] hero-content">
+            <div class="on-top md:max-w-[640px] hero-content  mb-8 md:mb-0" style="margin-top:20vh">
                 <h1 class="hero-logo">
                     somos <br />
                     <span class="high">TRIANA</span>
@@ -23,7 +23,7 @@
             <div class="hero-img block-img--general">
             </div>
         </section>
-        <section>
+        <section id="equipo">
             <h2 class="inverted">
                 somos <br />
                 <span class="high">EQUIPO</span>
@@ -91,7 +91,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="alumnos">
             <div class="flex flex-col-reverse relative">
                 <div class="on-top mt-4 md:mt-0 md:ml-[48%]">
                     <h2>
@@ -165,7 +165,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="contenido">
             <div class="flex flex-col-reverse relative">
                 <div class="on-top mt-4 md:mt-0">
                     <h2 class="inverted">
@@ -259,7 +259,7 @@
                             <el-card class="profile-card h-full" shadow="hover">
                                 <template #header>
                                     <div class="card-header">
-                                        <span class="font-serif font-bold text-primary text-lg">Actividad 1: Comida</span>
+                                        <span class="font-serif font-bold text-primary text-lg">Unidad 1: Comida</span>
                                         <el-button link class="cursor hover:underline text-sm" :icon="ElIconTopRight">
                                             Empezar
                                         </el-button>
@@ -268,7 +268,8 @@
                                 En esta actividad repasaremos el vocabulario relacionado con la comida y el mercado.
                                 <ul class="mt-4">
                                     <li>
-                                        <div class="dash"></div><span class="text-primary font-serif text-sm">Cocinamos una
+                                        <div class="dash"></div><span class="text-primary font-serif text-sm">Actividad
+                                            Cocinamos una
                                             receta (Ñam Ñam): </span>
                                         En esta actividad vamos a cocinar una receta de la cocina española. Para ello, vamos
                                         a
@@ -277,7 +278,8 @@
                                         la salud.
                                     </li>
                                     <li>
-                                        <div class="dash"></div><span class="text-primary font-serif text-sm">Vamos al
+                                        <div class="dash"></div><span class="text-primary font-serif text-sm">Actividad
+                                            Vamos al
                                             mercado
                                             (¡Qué rico!): </span>
                                         En esta actividad vamos a ir al mercado y vamos a comprar los ingredientes para
@@ -292,7 +294,7 @@
                             <el-card class="profile-card h-full" shadow="hover">
                                 <template #header>
                                     <div class="card-header">
-                                        <span class="font-serif font-bold text-primary text-lg">Actividad 2: Salud</span>
+                                        <span class="font-serif font-bold text-primary text-lg">Unidad 2: Salud</span>
                                         <el-button link class="cursor hover:underline text-sm" :icon="ElIconTopRight">
                                             Empezar
                                         </el-button>
@@ -301,14 +303,16 @@
                                 En esta actividad repasaremos el vocabulario relacionado con la salud y el médico.
                                 <ul class="mt-4">
                                     <li>
-                                        <div class="dash"></div><span class="text-primary font-serif text-sm">Voy al médico:
+                                        <div class="dash"></div><span class="text-primary font-serif text-sm">Actividad Voy
+                                            al médico:
                                         </span>
                                         En esta actividad vamos a ir al médico y vamos a aprender vocabulario relacionado
                                         con la
                                         salud y las interacciones.
                                     </li>
                                     <li>
-                                        <div class="dash"></div><span class="text-primary font-serif text-sm">¡Entiendo el
+                                        <div class="dash"></div><span class="text-primary font-serif text-sm">Actividad
+                                            ¡Entiendo el
                                             informe médico: </span>
                                         En esta actividad vamos a aprender vocabulario relacionado con la salud y las
                                         interacciones.

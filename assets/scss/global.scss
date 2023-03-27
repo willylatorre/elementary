@@ -34,6 +34,7 @@ h1 {
     @media(max-width: 600px) {
         font-size: 2rem;
         padding-left: 56px;
+        margin-bottom: 24px;
 
         span {
             font-size: 3rem;
@@ -86,6 +87,8 @@ h2 {
     }
 }
 
+
+
 h2.inverted {
     padding-right: 140px;
     padding-left: 0;
@@ -110,6 +113,45 @@ h2.inverted {
 
     @media(max-width: 600px) {
         padding-right: 56px;
+
+        :after {
+            width: 40px;
+        }
+    }
+}
+
+
+h4 {
+    font-family: 'Noto Serif';
+    font-weight: 700;
+    position: relative;
+    padding-left: 120px;
+    display: inline-block;
+
+    span {
+        color: theme('colors.primary');
+        font-size: 48px;
+        line-height: 40px;
+    }
+
+    :after {
+        content: " ";
+        display: block;
+        height: 2px;
+        width: 100px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: theme('colors.primary');
+    }
+
+    @media(max-width: 600px) {
+        padding-left: 56px;
+
+
+        span {
+            font-size: 2rem;
+        }
 
         :after {
             width: 40px;
@@ -162,6 +204,10 @@ p {
         border: 0 !important;
         padding-bottom: 0;
     }
+
+    &--stateless {
+        opacity: 1;
+    }
 }
 
 .dash {
@@ -177,16 +223,16 @@ p {
 
 
 .hero {
-    min-height: 80vh;
+    min-height: 85vh;
 
     &-content {
-        margin-top: 72px;
+        margin-top: 126px;
         // background-color: rgb(255 244 224 / 73%);
-        padding: 24px;
+        // padding: 24px;
         // border-radius: 12px;
 
         @media(max-width: 600px) {
-            margin-top: 48px;
+            margin-top: 96px;
         }
     }
 
