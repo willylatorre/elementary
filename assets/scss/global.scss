@@ -130,6 +130,18 @@ section {
     font-weight: 700;
 }
 
+.link {
+    display: inline-block;
+    padding: 12px;
+    border-radius: 6px;
+
+    border: 1px dashed theme('colors.primary');
+
+    &:hover {
+        background-color: theme('colors.secondary');
+    }
+}
+
 p {
     padding: 12px 0;
 }
@@ -143,7 +155,7 @@ p {
 
     &:hover {
         opacity: 1;
-        transform: scale(1.05);
+        // transform: scale(1.05);
     }
 
     :deep(.el-card__header) {
