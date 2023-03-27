@@ -20,7 +20,7 @@
                     </el-icon>
                 </a>
             </div>
-            <div class="hero-img">
+            <div class="hero-img block-img--general">
             </div>
         </section>
         <section>
@@ -324,91 +324,7 @@
 </template>
 
 <style lang="scss" scoped>
-.hero {
-    min-height: 85vh;
-
-    &-content {
-        margin-top: 96px;
-        // background-color: rgb(255 244 224 / 73%);
-        padding: 24px;
-        // border-radius: 12px;
-
-        @media(max-width: 600px) {
-            margin-top: 48px;
-        }
-    }
-
-    &-sub {
-        background: rgb(255, 244, 224);
-        // background: linear-gradient(90deg, rgba(255, 244, 224, 1) 0%, rgba(255, 244, 224, 1) 81%, rgba(255, 191, 155, 1) 100%);
-        border-radius: 0 6px 96px 0;
-        padding: 12px 36px 12px 0;
-        max-width: 420px;
-
-        @media(max-width: 600px) {
-            padding: 12px 0;
-        }
-    }
-
-    &-logo {
-        @media(max-width: 600px) {
-            width: 90%;
-        }
-    }
-
-    &-img {
-        width: 55%;
-        height: 400px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        background-image: url('../assets/img/photo1.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        border-radius: 12px 24px 0 36px;
-        opacity: 0.9;
-        z-index: 1;
-
-        @media(max-width: 600px) {
-            position: relative;
-            width: 100%;
-        }
-    }
-}
-
 .block-img {
-    width: 55%;
-    height: 400px;
-    position: absolute;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 0 24px 12px 36px;
-    opacity: 0.9;
-    z-index: 1;
-
-    @media(max-width: 600px) {
-        position: relative;
-        width: 100%;
-    }
-
-    &--top {
-        top: 0;
-    }
-
-    &--bottom {
-        bottom: 0;
-    }
-
-    &--left {
-        left: 0;
-    }
-
-    &--right {
-        right: 0;
-    }
-
     &--1 {
         background-image: url('../assets/img/photo2.jpeg');
     }
@@ -416,13 +332,14 @@
     &--group {
         background-image: url('../assets/img/photo-group.jpg');
     }
+
+    &--general {
+        background-image: url('../assets/img/photo1.jpg');
+    }
 }
 
 
 
-.on-top {
-    z-index: 2;
-}
 
 .profile-card {
     :deep(.el-card__header) {
@@ -431,9 +348,7 @@
     }
 }
 
-ul li {
-    margin-bottom: 12px;
-}
+
 
 .card-header {
     display: flex;
