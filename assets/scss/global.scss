@@ -315,3 +315,19 @@ p {
 ul li {
     margin-bottom: 12px;
 }
+
+
+table,
+th,
+td {
+    border: 1px solid theme('colors.primary');
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 12px;
+}

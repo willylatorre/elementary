@@ -3,327 +3,767 @@
 const verSolucion = ref()
 
 const ejercicio = reactive({
-    '1': '',
-    '2': '',
-    '3': '',
-    '4': '',
-    '5': '',
-    '6': '',
-    '7': '',
-    '8': '',
-    '9': '',
-    '10': '',
-    '11': '',
-    '12': '',
-    '13': '',
-    '14': ''
+    'fresco': undefined,
+    'tomate': undefined,
+    'zanahoria': undefined,
+    'pimiento': undefined,
+    'sandia-1': undefined,
+    'sandia-2': undefined,
+    'dulce': undefined,
+    'crujiente': undefined,
+    'pepino-1': undefined,
+    'pepino-2': undefined,
+    'pepino-3': undefined,
+    'cebolla-1': undefined,
+    'cebolla-2': undefined,
+    'cebolla-3': undefined,
+    'media': undefined,
+    'kilo-1': undefined,
+    'kilo-2': undefined,
+    'cuatro': undefined,
+    'tres': undefined,
+    'dos-1': undefined,
+    'dos-2': undefined,
+    'manzana': undefined,
+    'melon': undefined,
+    'grande': undefined
 })
+
+const answers = reactive({
+    'fresco': 'warning',
+    'tomate': 'primary',
+    'zanahoria': 'success',
+    'pimiento': 'success',
+    'sandia-1': 'primary',
+    'sandia-2': 'primary',
+    'dulce': 'warning',
+    'crujiente': 'warning',
+    'pepino-1': 'success',
+    'pepino-2': 'success',
+    'pepino-3': 'success',
+    'cebolla-1': 'success',
+    'cebolla-2': 'success',
+    'cebolla-3': 'success',
+    'media': 'info',
+    'kilo-1': 'info',
+    'kilo-2': 'info',
+    'cuatro': 'info',
+    'tres': 'info',
+    'dos-1': 'info',
+    'dos-2': 'info',
+    'manzana': 'primary',
+    'melon': 'primary',
+    'grande': 'warning'
+})
+
+const ejercicio2 = reactive({})
 
 const correctAnswers = computed(() => {
     return Object.entries(ejercicio).filter(([key, value]) => {
-        return value + '' === key
+        return value === answers[key]
     }).length
 })
 
-const options = [{
-    label: 'verduras',
-    value: 1
-},
-{
-    label: 'tomates',
-    value: 2
-},
-{
-    label: 'lechugas',
-    value: 3
-},
-{
-    label: 'fruta',
-    value: 4
-},
-{
-    label: 'manzanas',
-    value: 5
-},
-{
-    label: 'dulces',
-    value: 6
-},
-{
-    label: 'cuatro',
-    value: 7
-},
-{
-    label: 'zanahorias',
-    value: 8
-},
-{
-    label: 'kilos',
-    value: 9
-},
-{
-    label: 'lechuga',
-    value: 10
-},
-{
-    label: 'romana',
-    value: 11
-},
-{
-    label: 'un',
-    value: 12
-},
-{
-    label: 'bolsa',
-    value: 13
-},
-{
-    label: 'compra',
-    value: 14
-}].sort((a, b) => a.label.localeCompare(b.label))
+const totalAnswers = computed(() => {
+    return Object.entries(ejercicio).length
+})
+
+const categories = [
+    {
+        label: 'Verduras',
+        value: 'success'
+    },
+    {
+        label: 'Frutas',
+        value: 'primary'
+    },
+    {
+        label: 'Números/Medidas',
+        value: 'info'
+    },
+    {
+        label: 'Adjetivos',
+        value: 'warning'
+    }]
 
 </script>
 
 <template>
     <div>
-        <el-card class="mt-4 card-dialog" shadow="never">
-            <div class="flex items-center justify-end w-full mb-4 mt-2 text-sm">
-                <el-progress class="w-[200px]" :text-inside="false" :stroke-width="6"
-                    :percentage="correctAnswers / options.length * 100" status="success" />
-                {{ correctAnswers }} / {{ options.length }} respuestas correctas
-            </div>
-
-            <el-tag effect="plain" class="mr-2 ">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconShoppingCart />
-                </el-icon>Dependiente
-            </el-tag>¡Hola! Buenas tardes y bienvenido a verdulería García. ¿En qué puedo
-            ayudarte hoy?
-            <br />
-            <el-tag effect="plain" class="mr-[32px]" type="info">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconUser />
-                </el-icon>Cliente
-            </el-tag> Hola, buenas tardes. Quiero comprar algunas frutas y
-            <el-select v-model="ejercicio['1']" :class="{
-                'wrong-answer': ejercicio['1'] && ejercicio['1'] !== 1,
-                'good-answer': ejercicio['1'] === 1,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select> para cocinar en casa.
-            ¿Qué me
-            recomiendas? <br />
-            <el-tag effect="plain" class="mr-2">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconShoppingCart />
-                </el-icon>Dependiente
-            </el-tag> Estupendo, tenemos una gran selección de productos frescos. Hoy tenemos en oferta
-            <el-select v-model="ejercicio['2']" :class="{
-                'wrong-answer': ejercicio['2'] && ejercicio['2'] !== 2,
-                'good-answer': ejercicio['2'] === 2,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>
-            ,
-            zanahorias y <el-select v-model="ejercicio['3']" :class="{
-                'wrong-answer': ejercicio['3'] && ejercicio['3'] !== 3,
-                'good-answer': ejercicio['3'] === 3,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>. <br />
-            <el-tag effect="plain" class="mr-[32px]" type="info">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconUser />
-                </el-icon>Cliente
-            </el-tag> Genial, también quiero comprar <el-select v-model="ejercicio['4']" :class="{
-                'wrong-answer': ejercicio['4'] && ejercicio['1'] !== 4,
-                'good-answer': ejercicio['4'] === 4,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select> de temporada. <br />
-            <el-tag effect="plain" class="mr-2">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconShoppingCart />
-                </el-icon>Dependiente
-            </el-tag> Entonces, te recomiendo estas <el-select v-model="ejercicio['5']" :class="{
-                'wrong-answer': ejercicio['5'] && ejercicio['5'] !== 5,
-                'good-answer': ejercicio['5'] === 5,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>. Son <el-select v-model="ejercicio['6']" :class="{
-                'wrong-answer': ejercicio['6'] && ejercicio['6'] !== 6,
-                'good-answer': ejercicio['6'] === 6,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select> y crujientes. ¿Cuántas
-            quieres?
-            <br />
-            <el-tag effect="plain" class="mr-[32px]" type="info">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconUser />
-                </el-icon>Cliente
-            </el-tag> Me pones <el-select v-model="ejercicio['7']" :class="{
-                'wrong-answer': ejercicio['7'] && ejercicio['7'] !== 7,
-                'good-answer': ejercicio['7'] === 7,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select> manzanas, por favor. <br />
-            <el-tag effect="plain" class="mr-2">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconShoppingCart />
-                </el-icon>Dependiente
-            </el-tag> Claro, aquí tienes. ¿necesitas algo más? <br />
-            <el-tag effect="plain" class="mr-[32px]" type="info">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconUser />
-                </el-icon>Cliente
-            </el-tag> Sí, también quiero algunas <el-select v-model="ejercicio['8']" :class="{
-                'wrong-answer': ejercicio['8'] && ejercicio['8'] !== 8,
-                'good-answer': ejercicio['8'] === 8,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select> para hacer una sopa. ¿Cuánto cuestan? <br />
-            <el-tag effect="plain" class="mr-2">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconShoppingCart />
-                </el-icon>Dependiente
-            </el-tag> Las zanahorias cuestan dos euros por kilo. ¿Cuántas quieres? <br />
-            <el-tag effect="plain" class="mr-[32px]" type="info">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconUser />
-                </el-icon>Cliente
-            </el-tag> Quiero comprar dos <el-select v-model="ejercicio['9']" :class="{
-                'wrong-answer': ejercicio['9'] && ejercicio['9'] !== 9,
-                'good-answer': ejercicio['9'] === 9,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>
-            , por favor. <br />
-            <el-tag effect="plain" class="mr-2">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconShoppingCart />
-                </el-icon>Dependiente
-            </el-tag> Muy bien, aquí tienes. ¿Puedo ayudarte en algo más? <br />
-            <el-tag effect="plain" class="mr-[32px]" type="info">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconUser />
-                </el-icon>Cliente
-            </el-tag> Sí, también necesito una <el-select v-model="ejercicio['10']" :class="{
-                'wrong-answer': ejercicio['10'] && ejercicio['10'] !== 10,
-                'good-answer': ejercicio['10'] === 10,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>.
-            <br />
-            <el-tag effect="plain" class="mr-2">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconShoppingCart />
-                </el-icon>Dependiente
-            </el-tag> Tenemos dos tipos de lechuga, ¿quieres una lechuga
-            <el-select v-model="ejercicio['11']" :class="{
-                'wrong-answer': ejercicio['11'] && ejercicio['11'] !== 11,
-                'good-answer': ejercicio['11'] === 11,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>
-            o una lechuga
-            iceberg? <br />
-            <el-tag effect="plain" class="mr-[32px]" type="info">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconUser />
-                </el-icon>Cliente
-            </el-tag> Me gusta la lechuga romana. ¿Cuánto cuesta? <br />
-            <el-tag effect="plain" class="mr-2">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconShoppingCart />
-                </el-icon>Dependiente
-            </el-tag> La lechuga romana cuesta
-            <el-select v-model="ejercicio['12']" :class="{
-                'wrong-answer': ejercicio['12'] && ejercicio['12'] !== 12,
-                'good-answer': ejercicio['12'] === 12,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>
-            euro cada una. ¿Cuántas quieres? <br />
-            <el-tag effect="plain" class="mr-[32px]" type="info">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconUser />
-                </el-icon>Cliente
-            </el-tag> Me pones dos lechugas romanas, por favor. <br />
-            <el-tag effect="plain" class="mr-2">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconShoppingCart />
-                </el-icon>Dependiente
-            </el-tag> Muy bien, aquí las tienes. ¿necesitas una
-            <el-select v-model="ejercicio['13']" :class="{
-                'wrong-answer': ejercicio['13'] && ejercicio['13'] !== 13,
-                'good-answer': ejercicio['13'] === 13,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>
-            ? <br />
-            <el-tag effect="plain" class="mr-[32px]" type="info">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconUser />
-                </el-icon>Cliente
-            </el-tag> Sí, por favor. <br />
-            <el-tag effect="plain" class="mr-2">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconShoppingCart />
-                </el-icon>Dependiente
-            </el-tag> ¿Puedo ayudarte en algo más? <br />
-            <el-tag effect="plain" class="mr-[32px]" type="info">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconUser />
-                </el-icon>Cliente
-            </el-tag> No, eso es todo por hoy. Muchas gracias. <br />
-            <el-tag effect="plain" class="mr-2">
-                <el-icon class="top-[2px] mr-1">
-                    <ElIconShoppingCart />
-                </el-icon>Dependiente
-            </el-tag> De nada. Que tengas un buen día y gracias por tu
-            <el-select v-model="ejercicio['14']" :class="{
-                'wrong-answer': ejercicio['14'] && ejercicio['14'] !== 14,
-                'good-answer': ejercicio['14'] === 14,
-            }" placeholder="selecciona" size="small" clearable filterable>
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>
-            . <br />
-
-
-
-            <el-collapse v-model="verSolucion" accordion class="mt-6">
-                <el-collapse-item title="Solución" name="sol">
-                    <div class="flex">
-                        <div class="flex-1">
-                            1 - verduras <br />
-                            2 - tomates<br />
-                            3 - lechugas<br />
-                            4 - fruta<br />
-                            5 - manzanas<br />
-                            6 - dulces<br />
-                            7 - cuatro<br />
-                        </div>
-                        <div class="flex-1">
-                            8 - zanahorias<br />
-                            9 - kilos<br />
-                            10 - lechuga<br />
-                            11 - romana<br />
-                            12 - un<br />
-                            13 - bolsa<br />
-                            14 - compra<br />
-                        </div>
+        <ClientOnly>
+            <el-card class="mt-4 card-dialog" shadow="never">
+                <h2 class="text-2xl font-bold mb-4 pl-0">Parte 1</h2>
+                <div class="flex items-center justify-between  mb-4 mt-2 text-sm">
+                    <div class="flex gap-2">
+                        <el-tag type="primary">FRUTA</el-tag>
+                        <el-tag type="success">VERDURA</el-tag>
+                        <el-tag type="info">UNIDAD/MEDIDA</el-tag>
+                        <el-tag type="warning">ADJETIVO</el-tag>
                     </div>
-                </el-collapse-item>
-            </el-collapse>
-        </el-card>
+
+                    <div>
+                        <el-progress class="w-[200px]" :text-inside="false" :stroke-width="6"
+                            :percentage="correctAnswers / totalAnswers * 100" status="success" />
+                        {{ correctAnswers }} / {{ totalAnswers }} respuestas correctas
+                    </div>
+                </div>
 
 
 
+                <el-tag effect="plain" class="mr-2 ">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconShoppingCart />
+                    </el-icon>Dependiente
+                </el-tag>¡Hola! Buenas tardes y bienvenido a verdulería García. ¿En qué puedo
+                ayudarte hoy?
+                <br />
+                <el-tag effect="plain" class="mr-[32px]" type="info">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconUser />
+                    </el-icon>Cliente
+                </el-tag> Hola, buenas tardes. Quiero comprar algunas frutas y
+                verduras para cocinar un gazpacho.
+                ¿Qué me
+                recomiendas? <br />
+                <el-tag effect="plain" class="mr-2">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconShoppingCart />
+                    </el-icon>Dependiente
+                </el-tag> Estupendo, tenemos una gran selección de productos
+                <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['fresco']
+                        }" :link="!ejercicio['fresco']" :type="ejercicio['fresco']">frescos</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['fresco']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover>.
+                Hoy tenemos en oferta
+                <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['tomate']
+                        }" :link="!ejercicio['tomate']" :type="ejercicio['tomate']">tomates</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['tomate']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover>
+                ,
+                <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['zanahoria']
+                        }" :link="!ejercicio['zanahoria']" :type="ejercicio['zanahoria']">zanahorias</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['zanahoria']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover> y <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['pimiento']
+                        }" :link="!ejercicio['pimiento']" :type="ejercicio['pimiento']">pimientos</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['pimiento']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+                </el-popover>. <br />
+                <el-tag effect="plain" class="mr-[32px]" type="info">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconUser />
+                    </el-icon>Cliente
+                </el-tag> Genial, también quiero comprar fruta de temporada. <br />
+                <el-tag effect="plain" class="mr-2">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconShoppingCart />
+                    </el-icon>Dependiente
+                </el-tag> Entonces, te recomiendo estas <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['sandia-1']
+                        }" :link="!ejercicio['sandia-1']" :type="ejercicio['sandia-1']">sandías</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['sandia-1']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover>. Son <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['dulce']
+                        }" :link="!ejercicio['dulce']" :type="ejercicio['dulce']">dulces</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['dulce']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover> y <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['crujiente']
+                        }" :link="!ejercicio['crujiente']" :type="ejercicio['crujiente']">crujientes</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['crujiente']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover>. ¿Cuántas
+                quieres?
+                <br />
+                <el-tag effect="plain" class="mr-[32px]" type="info">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconUser />
+                    </el-icon>Cliente
+                </el-tag> Me pones <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['media']
+                        }" :link="!ejercicio['media']" :type="ejercicio['media']">media</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['media']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover> <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['sandia-2']
+                        }" :link="!ejercicio['sandia-2']" :type="ejercicio['sandia-2']">sandía</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['sandia-2']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover>, por favor. <br />
+                <el-tag effect="plain" class="mr-2">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconShoppingCart />
+                    </el-icon>Dependiente
+                </el-tag> Claro, aquí tienes. ¿necesitas algo más? <br />
+                <el-tag effect="plain" class="mr-[32px]" type="info">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconUser />
+                    </el-icon>Cliente
+                </el-tag> Sí, también quiero <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['pepino-1']
+                        }" :link="!ejercicio['pepino-1']" :type="ejercicio['pepino-1']">pepinos</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['pepino-1']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover> y <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['cebolla-1']
+                        }" :link="!ejercicio['cebolla-1']" :type="ejercicio['cebolla-1']">cebollas</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['cebolla-1']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover>para cocinar el gazpacho. ¿Cuánto cuestan? <br />
+                <el-tag effect="plain" class="mr-2">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconShoppingCart />
+                    </el-icon>Dependiente
+                </el-tag> Los <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['pepino-2']
+                        }" :link="!ejercicio['pepino-2']" :type="ejercicio['pepino-2']">pepinos</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['pepino-2']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover> cuestan <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['dos-2']
+                        }" :link="!ejercicio['dos-2']" :type="ejercicio['dos-2']">dos</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['dos-2']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover> euros el <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['kilo-1']
+                        }" :link="!ejercicio['kilo-1']" :type="ejercicio['kilo-1']">kilo</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['kilo-1']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover> y las <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['cebolla-2']
+                        }" :link="!ejercicio['cebolla-2']" :type="ejercicio['cebolla-2']">cebollas</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['cebolla-2']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover> <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['cuatro']
+                        }" :link="!ejercicio['cuatro']" :type="ejercicio['cuatro']">cuatro</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['cuatro']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover> euros el <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['kilo-2']
+                        }" :link="!ejercicio['kilo-2']" :type="ejercicio['kilo-2']">kilo</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['kilo-2']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+                </el-popover>. ¿Cuánto quieres? <br />
+                <el-tag effect="plain" class="mr-[32px]" type="info">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconUser />
+                    </el-icon>Cliente
+                </el-tag> Quiero comprar <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['tres']
+                        }" :link="!ejercicio['tres']" :type="ejercicio['tres']">tres</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['tres']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover> <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['pepino-3']
+                        }" :link="!ejercicio['pepino-3']" :type="ejercicio['pepino-3']">pepinos</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['pepino-3']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+                </el-popover>
+                y <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['dos-1']
+                        }" :link="!ejercicio['dos-1']" :type="ejercicio['dos-1']">dos</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['dos-1']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover><el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['cebolla-3']
+                        }" :link="!ejercicio['cebolla-3']" :type="ejercicio['cebolla-3']">cebollas</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['cebolla-3']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover>,
+                por favor. <br />
+                <el-tag effect="plain" class="mr-2">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconShoppingCart />
+                    </el-icon>Dependiente
+                </el-tag> Muy bien, aquí tienes. ¿Puedo ayudarte en algo más? También tenemos <el-popover placement="bottom"
+                    :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['manzana']
+                        }" :link="!ejercicio['manzana']" :type="ejercicio['manzana']">manzanas</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['manzana']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover> y <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['melon']
+                        }" :link="!ejercicio['melon']" :type="ejercicio['melon']">melones</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['melon']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover> a buen precio.<br />
+                <el-tag effect="plain" class="mr-[32px]" type="info">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconUser />
+                    </el-icon>Cliente
+                </el-tag> No, ¡nada más! ¡Gracias!
+                <br />
+                <el-tag effect="plain" class="mr-2">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconShoppingCart />
+                    </el-icon>Dependiente
+                </el-tag> Muy bien, aquí las tienes. ¿necesitas una
+                bolas
+                ? <br />
+                <el-tag effect="plain" class="mr-[32px]" type="info">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconUser />
+                    </el-icon>Cliente
+                </el-tag> Sí, por favor, una bolsa <el-popover placement="bottom" :width="200" trigger="click">
+                    <template #reference>
+                        <el-button class="fake-button" :class="{
+                            'fake-button--dark': !ejercicio['grande']
+                        }" :link="!ejercicio['grande']" :type="ejercicio['grande']">grande</el-button>
+                    </template>
+                    <div>
+                        <span class="text-xs block">Selecciona una categoría</span>
+                        <el-select v-model="ejercicio['grande']" placeholder="Categoría" size="small">
+                            <el-option v-for="item in categories" :key="item.value" :label="item.label"
+                                :value="item.value" />
+                        </el-select>
+                    </div>
+
+                </el-popover> <br />
+                <el-tag effect="plain" class="mr-2">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconShoppingCart />
+                    </el-icon>Dependiente
+                </el-tag> ¿Puedo ayudarte en algo más? <br />
+                <el-tag effect="plain" class="mr-[32px]" type="info">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconUser />
+                    </el-icon>Cliente
+                </el-tag> No, eso es todo por hoy. Muchas gracias. <br />
+                <el-tag effect="plain" class="mr-2">
+                    <el-icon class="top-[2px] mr-1">
+                        <ElIconShoppingCart />
+                    </el-icon>Dependiente
+                </el-tag> De nada. Que tengas un buen día y gracias por tu
+                compra
+                . <br />
 
 
 
+                <el-collapse v-model="verSolucion" accordion class="mt-6">
+                    <el-collapse-item title="Solución" name="sol">
+                        <div class="flex flex-wrap">
+                            <div class="flex-1">
 
+                                <el-tag type="primary">FRUTA</el-tag> <br />
+                                tomate<br />
+                                sandia (x2 veces)<br />
+                                manzana<br />
+                                melon
+                                <br />
+                            </div>
+                            <div class="flex-1">
+                                <el-tag type="success">VERDURA</el-tag> <br />
+
+                                zanahoria<br />
+                                pimiento<br />
+
+
+                                pepino (x3 veces)<br />
+
+                                cebolla (x3 veces)<br />
+
+
+                            </div>
+                            <div class="flex-1">
+
+                                <el-tag type="info">UNIDAD/MEDIDA</el-tag><br />
+
+
+                                media <br />
+                                kilo (x2 veces) <br />
+                                cuatro <br />
+                                tres <br />
+                                dos (x2) <br />
+
+                            </div>
+                            <div class="flex-1">
+
+                                <el-tag type="warning">ADJETIVO</el-tag><br />
+                                fresco<br />
+                                dulce<br />
+                                crujiente<br />
+                                grande <br />
+                            </div>
+                        </div>
+                    </el-collapse-item>
+                </el-collapse>
+
+                <el-divider class="mt-10 mb-4" />
+
+                <h2 class="text-2xl font-bold mt-6 mb-4 pl-0">Parte 2</h2>
+                <p> Para acabar de aprender este vocabulario...¿Cómo se traducen estas frutas y verduras en
+                    holandés? </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Palabra en español</th>
+                            <th>Palabra en holandés</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Frambuesa</td>
+                            <td>
+                                <el-input v-model="ejercicio2['frambuesa']" placeholder="Palabra en holandés" size="small"
+                                    class="w-full" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tomate</td>
+                            <td>
+                                <el-input v-model="ejercicio2['tomate']" placeholder="Palabra en holandés" size="small"
+                                    class="w-full" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Zanahoria</td>
+                            <td>
+                                <el-input v-model="ejercicio2['zanahoria']" placeholder="Palabra en holandés" size="small"
+                                    class="w-full" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sandía</td>
+                            <td>
+                                <el-input v-model="ejercicio2['sandia']" placeholder="Palabra en holandés" size="small"
+                                    class="w-full" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Manzana</td>
+                            <td>
+                                <el-input v-model="ejercicio2['manzana']" placeholder="Palabra en holandés" size="small"
+                                    class="w-full" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cebolla</td>
+                            <td>
+                                <el-input v-model="ejercicio2['cebolla']" placeholder="Palabra en holandés" size="small"
+                                    class="w-full" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pimiento</td>
+                            <td>
+                                <el-input v-model="ejercicio2['pimiento']" placeholder="Palabra en holandés" size="small"
+                                    class="w-full" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Aguacate</td>
+                            <td>
+                                <el-input v-model="ejercicio2['aguacate']" placeholder="Palabra en holandés" size="small"
+                                    class="w-full" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Melón</td>
+                            <td>
+                                <el-input v-model="ejercicio2['melon']" placeholder="Palabra en holandés" size="small"
+                                    class="w-full" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pera</td>
+                            <td>
+                                <el-input v-model="ejercicio2['pera']" placeholder="Palabra en holandés" size="small"
+                                    class="w-full" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <el-collapse v-model="verSolucion" accordion class="mt-6">
+                    <el-collapse-item title="Solución" name="sol2">
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Palabra en español</th>
+                                    <th>Palabra en holandés</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Frambuesa</td>
+                                    <td>
+                                        Frambozen
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tomate</td>
+                                    <td>
+                                        Tomaat
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Zanahoria</td>
+                                    <td>
+                                        Wortel
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sandía</td>
+                                    <td>
+                                        Watermeloen
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Manzana</td>
+                                    <td>
+                                        Appel
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Cebolla</td>
+                                    <td>
+                                        Ui
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Pimiento</td>
+                                    <td>
+                                        Paprika
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Aguacate</td>
+                                    <td>
+                                        Avocado
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Melón</td>
+                                    <td>
+                                        Meloen
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Pera</td>
+                                    <td>
+                                        Peer
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </el-collapse-item>
+                </el-collapse>
+            </el-card>
+        </ClientOnly>
     </div>
 </template>
 
@@ -338,5 +778,16 @@ const options = [{
 
 .good-answer {
     border: 1px solid #67c23a !important;
+}
+
+.fake-button {
+    top: -1px;
+    position: relative;
+    font-size: 16px;
+
+    &--dark {
+        color: theme('colors.dark');
+        padding: 0;
+    }
 }
 </style>

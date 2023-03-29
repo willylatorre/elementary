@@ -14,7 +14,7 @@
                     <span class="mx-2">/</span>
                     <a href="/#contenido">Contenido</a>
                     <span class="mx-2">/</span>
-                    <a href="/#activdades">Actividades</a>
+                    <a href="/#actividades">Actividades</a>
                 </div>
                 <nuxt-link to="/" class="text-dark text-xs" v-else>
                     <el-icon class="mr-2">
