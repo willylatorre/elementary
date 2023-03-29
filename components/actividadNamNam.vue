@@ -146,15 +146,17 @@ const options = [{
                 <p class="my-3">Rellena los huecos de la receta de gazpacho con ayuda de los alimentos y las palabras clave
                     proporcionadas en el ejercicio. </p>
 
-                <h3 class="text-xl font-medium">Receta de gazpacho</h3>
-                <p>
+                <h3 class="text-xl font-medium"> <el-icon class="mr-2 top-[2px]">
+                        <ElIconBowl />
+                    </el-icon>Receta de gazpacho</h3>
+                <p class="leading-normal">
                     Para preparar el gazpacho necesitamos un <el-select v-model="ejercicio['1']" :class="{
                         'wrong-answer': ejercicio['1'] && ejercicio['1'] !== 1,
                         'good-answer': ejercicio['1'] === 1,
                     }" placeholder="selecciona" size="small" clearable filterable>
                         <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
                     </el-select> y una batidora.</p>
-                <p>Para cuatro personas ponemos un <el-select v-model="ejercicio['1']" :class="{
+                <p class="leading-loose">Para cuatro personas ponemos un <el-select v-model="ejercicio['2']" :class="{
                     'wrong-answer': ejercicio['2'] && ejercicio['2'] !== 2,
                     'good-answer': ejercicio['2'] === 2,
                 }" placeholder="selecciona" size="small" clearable filterable>

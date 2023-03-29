@@ -8,12 +8,10 @@
                     Unidad 1 <br />
                     <span class="high">Comida</span>
                 </h1>
-                <p class="text-dark max-w-[400px] hero-sub">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    euismod, nisl sit amet aliquam luctus, nunc nisl aliquet
-                    tortor, vel aliquam nisl nisl sit amet lorem. Sed euismod,
-                    nisl sit amet aliquam luctus, nunc nisl aliquet tortor, vel
-                    aliquam nisl nisl sit amet lorem.
+                <p class="text-dark max-w-[400px] bg-bg hero-sub">
+                    En esta unidad repasamos el léxico relacionado con la comida y el mercado. Vemos un vídeo de una receta
+                    y aprendemos el vocabulario relacionado con ella. Después, vamos al mercado y compramos los
+                    ingredientes para cocinar la receta.
                 </p>
             </div>
             <div class="hero-img block-img--market">
