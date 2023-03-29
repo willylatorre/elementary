@@ -108,7 +108,24 @@ const options = [{
     <div>
         <ClientOnly>
             <el-card class="mt-4" shadow="never">
-                <h2 class="text-2xl font-bold mb-4 pl-0">Parte 1</h2>
+                <div class="flex justify-between items-start">
+                    <h2 class="text-2xl font-bold mb-4 pl-0">Parte 1</h2>
+
+                    <div class="flex items-center"><el-tag class="text-lg">Destrezas:
+                            <el-tooltip class="box-item" effect="dark" content="Comprensión auditiva" placement="top">
+                                <el-icon class="mr-2 top-[2px]">
+                                    <ElIconChatLineRound />
+                                </el-icon>
+                            </el-tooltip>
+
+                            <el-tooltip class="box-item" effect="dark" content="Comprensión lectora" placement="top">
+                                <el-icon class="top-[2px]">
+                                    <ElIconReading />
+                                </el-icon>
+                            </el-tooltip>
+                        </el-tag>
+                    </div>
+                </div>
                 <iframe width="560" height="315" style="max-width: 80%;" src="https://www.youtube.com/embed/GyGtLGMee_M"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -136,19 +153,30 @@ const options = [{
 
                 <div class="flex justify-between items-center">
                     <h2 class="text-2xl font-bold  mt-6 mb-4 pl-0">Parte 2</h2>
+                    <el-tag class="text-lg">Destrezas:
+                        <el-tooltip class="box-item" effect="dark" content="Comprensión lectora" placement="top">
+                            <el-icon class="top-[2px]">
+                                <ElIconReading />
+                            </el-icon>
+                        </el-tooltip>
+                    </el-tag>
+
+                </div>
+                <p class="my-3">Rellena los huecos de la receta de gazpacho con ayuda de los alimentos y las palabras clave
+                    proporcionadas en el ejercicio. </p>
+
+                <div class="flex justify-between items-center mb-4`">
+                    <h3 class="text-xl font-medium"> <el-icon class="mr-2 top-[-2px]">
+                            <ElIconBowl />
+                        </el-icon>Receta de gazpacho</h3>
                     <div class="flex items-center justify-end text-sm">
                         <el-progress class="w-[200px]" :text-inside="false" :stroke-width="6"
                             :percentage="correctAnswers / options.length * 100" status="success" />
                         {{ correctAnswers }} / {{ options.length }} respuestas correctas
                     </div>
+
                 </div>
 
-                <p class="my-3">Rellena los huecos de la receta de gazpacho con ayuda de los alimentos y las palabras clave
-                    proporcionadas en el ejercicio. </p>
-
-                <h3 class="text-xl font-medium"> <el-icon class="mr-2 top-[2px]">
-                        <ElIconBowl />
-                    </el-icon>Receta de gazpacho</h3>
                 <p class="leading-normal">
                     Para preparar el gazpacho necesitamos un <el-select v-model="ejercicio['1']" :class="{
                         'wrong-answer': ejercicio['1'] && ejercicio['1'] !== 1,

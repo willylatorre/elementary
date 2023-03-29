@@ -47,8 +47,7 @@
             <InfoActividadMercado />
 
             <h3 class="font-serif font-bold text-primary text-xl mt-8">Actividad</h3>
-            <p>Lee atentamente el diálogo y encuentra las palabras que corresponden a cada categoría.
-            </p>
+        
 
             <ActividadMercado />
 

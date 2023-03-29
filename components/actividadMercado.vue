@@ -92,8 +92,31 @@ const categories = [
     <div>
         <ClientOnly>
             <el-card class="mt-4 card-dialog" shadow="never">
-                <h2 class="text-2xl font-bold mb-4 pl-0">Parte 1</h2>
-                <div class="flex items-center justify-between  mb-4 mt-2 text-sm">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-2xl font-bold mb-4 pl-0">Parte 1</h2>
+
+                    <div class="flex items-center"><el-tag size="large" class="text-lg">Destrezas:
+                            <el-tooltip class="box-item" effect="dark" content="Comprensión y expresión oral"
+                                placement="top">
+                                <el-icon class="mr-2 top-[2px]">
+                                    <ElIconChatLineRound />
+                                </el-icon>
+                            </el-tooltip>
+
+                            <el-tooltip class="box-item" effect="dark" content="Comprensión lectora" placement="top">
+                                <el-icon class="top-[2px]">
+                                    <ElIconReading />
+                                </el-icon>
+                            </el-tooltip>
+                        </el-tag>
+                    </div>
+                </div>
+
+                <p> <el-icon class="mr-2 top-[2px]">
+                        <ElIconReading />
+                    </el-icon> Lee atentamente el diálogo y encuentra las palabras que corresponden a cada categoría.
+                </p>
+                <div class="flex items-center justify-between  mb-10 mt-2 text-sm">
                     <div class="flex gap-2">
                         <el-tag type="primary">FRUTA</el-tag>
                         <el-tag type="success">VERDURA</el-tag>
@@ -601,8 +624,20 @@ const categories = [
                 </el-collapse>
 
                 <el-divider class="mt-10 mb-4" />
+                <div class="flex justify-between items-start mt-6">
+                    <h2 class="text-2xl font-bold mt-0 mb-4 pl-0">Parte 2</h2>
+                    <div class="flex items-center"><el-tag class="text-lg">Destrezas:
+                            <el-tooltip class="box-item" effect="dark" content="Comprensión y expresión escrita"
+                                placement="top">
+                                <el-icon class="top-[2px]">
+                                    <ElIconEditPen />
+                                </el-icon>
+                            </el-tooltip>
+                        </el-tag>
+                    </div>
+                </div>
 
-                <h2 class="text-2xl font-bold mt-6 mb-4 pl-0">Parte 2</h2>
+
                 <p> Para acabar de aprender este vocabulario...¿Cómo se traducen estas frutas y verduras en
                     holandés? </p>
 

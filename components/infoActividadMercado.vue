@@ -32,7 +32,8 @@
             </tr>
             <tr>
                 <td class="info-grid__header">Destrezas</td>
-                <td class="info-grid__cell">Comprensión y expresión auditiva y lectora.
+                <td class="info-grid__cell">Comprensión y expresión auditiva y lectora.<br /> Comprensión y expresión
+                    escrita.
                 </td>
             </tr>
             <tr>
@@ -64,5 +65,6 @@
                     Compartir los resultados. <br />
                 </td>
             </tr>
-    </tbody>
-</table></template>
+        </tbody>
+    </table>
+</template>
