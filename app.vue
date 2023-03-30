@@ -4,10 +4,6 @@
             <nav class="p-3 flex flex-wrap justify-between items-center max-w-[840px] mx-auto min-h-[60px]">
                 <h3 class="text-[2rem]"><span class="high text-primary">TRIANA</span></h3>
                 <div class="flex items-center" v-if="$route.path === '/'">
-
-                    <a href="/">Inicio</a>
-                    <span class="mx-2">/</span>
-
                     <a href="/#equipo">Equipo</a>
                     <span class="mx-2">/</span>
                     <a href="/#alumnos">Alumnos</a>
