@@ -19,10 +19,11 @@
         </section>
 
         <section class="mt-4" id="receta">
-            <h4 class="">
+            <h4 class="bg-bg rounded-br-xl pr-3 pb-3">
                 actividad <br />
                 <span class="high leading-normal">¡ÑAM ÑAM!</span>
             </h4>
+            <img src="../assets/img/photo-cooking.jpg" class="inline-img" alt="cooking" />
 
             <h3 class="font-serif font-bold text-primary text-xl mt-8">Información</h3>
 
@@ -34,23 +35,37 @@
 
         </section>
 
-        <el-divider class="my-6">
-        </el-divider>
-
         <section class="mt-10" id="mercado">
-            <h4 class="">
+            <h4 class="bg-bg rounded-br-xl pr-3 pb-3 max-w-[520px]">
                 actividad <br />
                 <span class="high">¡NOS VAMOS AL MERCADO!</span>
             </h4>
+
+            <img src="../assets/img/photo2.jpg" class="inline-img" alt="cooking" />
 
             <h3 class="font-serif font-bold text-primary text-xl mt-8">Información</h3>
             <InfoActividadMercado />
 
             <h3 class="font-serif font-bold text-primary text-xl mt-8">Actividad</h3>
-        
+
 
             <ActividadMercado />
 
+        </section>
+
+        <section>
+            <el-card class="profile-card !opacity-100" shadow="hover">
+                <template #header>
+                    <div class="card-header">
+                        <span class="font-serif font-bold text-primary text-xl"><el-icon class="mr-2 top-[2px]">
+                                <ElIconShop />
+                            </el-icon>Visita al mercado</span>
+                    </div>
+                </template>
+                Para finalizar la unidad, vamos a ir al mercado y vamos a comprar los ingredientes para cocinar la receta.
+                <br />
+                ¡Recuerda poner en práctica todo lo que has aprendido en esta unidad y usar el vocabulario que hemos visto!
+            </el-card>
         </section>
     </div>
 </template>
@@ -58,6 +73,10 @@
 <style lang="scss" scoped>
 .block-img {
     &--market {
+        background-image: url('../assets/img/photo-market.jpg');
+    }
+
+    &--cooking {
         background-image: url('../assets/img/photo-market.jpg');
     }
 }

@@ -182,7 +182,7 @@
                         <ul>
 
                             <li>
-                                <div class="dash"></div><span class="text-primary font-serif text-sm">Palabras
+                                <div class="dash"></div><span class="text-primary font-serif">PALABRAS
                                     :</span> La adquisición de léxico se considera una base del aprendizaje de idiomas. En
                                 esta web se comparten una serie de actividades para el aprendizaje de vocabulario,
                                 concretamente de palabras, según la tipología de J. R. Gómez Molina <a
@@ -191,25 +191,25 @@
                                     español (2004)]</a>.
                             </li>
                             <li>
-                                <div class="dash"></div><span class="text-primary font-serif text-sm">Competencia léxica:
+                                <div class="dash"></div><span class="text-primary font-serif">COMPETENCIA LÉXICA:
                                 </span> La finalidad es mejorar la competencia léxica de los estudiantes, contribuyendo al
                                 crecimiento de sus redes asociativas de palabras. Los retos que se plantean buscan también
                                 aprovechar su conocimiento de otras lenguas para reconocer y asociar el vocabulario,
                                 adquirirlo y utilizarlo en su vida cotidiana.
                             </li>
                             <li>
-                                <div class="dash"></div><span class="text-primary font-serif text-sm">Contextos reales:
+                                <div class="dash"></div><span class="text-primary font-serif">CONTEXTOS REALES:
                                 </span> Se generarán situaciones y contextos muy cercanos a la realidad y que se encuentran
                                 en su día a día: en el mercado, en el ambulatorio, en el restaurante, de fiesta, ¡una
                                 multa!...
                             </li>
                             <li>
-                                <div class="dash"></div><span class="text-primary font-serif text-sm">Campos léxicos:
+                                <div class="dash"></div><span class="text-primary font-serif">CAMPOS LÉXICOS:
                                 </span> El objetivo es trabajar diferentes campos léxicos, que se irán ampliando a lo largo
                                 de los meses, y desarrollar sus destrezas de expresión y comprensión oral y escrita.
                             </li>
                             <li>
-                                <div class="dash"></div><span class="text-primary font-serif text-sm">Context discursivo:
+                                <div class="dash"></div><span class="text-primary font-serif">CONTEXTO DISCURSIVO:
                                 </span> El léxico se trabajará en un contexto discursivo, para que el estudiante conozca el
                                 uso de esas palabras, y no únicamente su significado aislado.
 
@@ -309,9 +309,9 @@
         <section id="actividades">
             <div class="flex flex-col-reverse relative">
                 <div class="on-top mt-4 lg:mt-0">
-                    <h2 class="inverted">
+                    <h2 class="inverted max-w-full">
                         somos <br />
-                        <span class="high">ACTIVIDADES</span>
+                        <span class="high ">ACTIVIDADES</span>
                     </h2>
                     <div class="bg-bg ">
 
@@ -400,7 +400,7 @@
 <style lang="scss" scoped>
 .block-img {
     &--1 {
-        background-image: url('../assets/img/photo2.jpeg');
+        background-image: url('../assets/img/photo3.jpg');
     }
 
     &--group {
@@ -408,7 +408,7 @@
     }
 
     &--general {
-        background-image: url('../assets/img/photo1.jpg');
+        background-image: url('../assets/img/photo6.jpg');
     }
 }
 
