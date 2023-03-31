@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
         <section class="hero flex flex-col relative">
