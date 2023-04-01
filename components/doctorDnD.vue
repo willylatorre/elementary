@@ -73,7 +73,7 @@ const correctAnswers = computed(() => {
                     </div>
 
                 </div>
-                <div class="drop mt-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-4">
                     <Dustbin v-for="bin in dustbins" :key="bin.id" :container="bin.id" @drop="handleDrop(bin.id, $event)"
                         :tags="bin.tags" />
                 </div>
@@ -119,10 +119,4 @@ const correctAnswers = computed(() => {
     </div>
 </template>
 
-<style lang="scss" scoped>
-.drop {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 6px;
-}
-</style>
+<style lang="scss" scoped></style>
