@@ -2,10 +2,115 @@
 
 const verSolucion = ref()
 
+const items = ref([])
+const item = ref('')
+
+const addItem = (_item) => {
+    items.value.push(_item)
+    item.value = ''
+}
+
+const removeItem = (item) => {
+    items.value.splice(items.value.indexOf(item), 1)
+}
+
+const getAssetSrc = (name) => {
+    const path = `/assets/img/ilustracion${name}.png`;
+    const modules = import.meta.glob("/assets/img/*", { eager: true });
+    console.log(modules)
+    const mod = modules[path];
+    console.log(path)
+    return mod?.default;
+};
 
 
 const ejercicio = reactive({})
-const ejercicio2 = reactive({})
+const ejercicio2 = reactive({
+    '1': {
+        'enfermedad': '',
+        'especialista': '',
+    },
+    '2': {
+        'enfermedad': '',
+        'especialista': '',
+    },
+    '3': {
+        'enfermedad': '',
+        'especialista': '',
+    },
+    '4': {
+        'enfermedad': '',
+        'especialista': '',
+    },
+    '5': {
+        'enfermedad': '',
+        'especialista': '',
+    },
+    '6': {
+        'enfermedad': '',
+        'especialista': '',
+    },
+    '7': {
+        'enfermedad': '',
+        'especialista': '',
+    }
+})
+const answers = reactive({
+    '1': {
+        'enfermedad': 'Depresión',
+        'especialista': 'Psicólogo',
+    },
+    '2': {
+        'enfermedad': 'Cáncer',
+        'especialista': 'Oncólogo',
+    },
+    '3': {
+        'enfermedad': 'COVID',
+        'especialista': 'Médico',
+    },
+    '4': {
+        'enfermedad': 'Varicela',
+        'especialista': 'Pediatra',
+    },
+    '5': {
+        'enfermedad': 'Alzheimer',
+        'especialista': 'Psiquiatra',
+    },
+    '6': {
+        'enfermedad': 'Menstruación',
+        'especialista': 'Ginecólogo',
+    },
+    '7': {
+        'enfermedad': 'Rotura',
+        'especialista': 'Traumatólogo',
+    }
+})
+
+const options1 = [
+    'Depresión',
+    'Cáncer',
+    'COVID',
+    'Varicela',
+    'Alzheimer',
+    'Menstruación',
+    'Rotura'
+].sort().map((item) => ({
+    value: item,
+    label: item
+}))
+
+const options2 = [
+    'Psicólogo',
+    'Oncólogo',
+    'Médico',
+    'Pediatra',
+    'Psiquiatra',
+    'Ginecólogo',
+    'Traumatólogo'
+].sort().map((item) => ({
+    value: item,
+    label: item
+}))
 
 
 </script>
@@ -160,10 +265,100 @@ const ejercicio2 = reactive({})
                 <p> Observa el diagnóstico de la doctora. ¿Qué palabras conoces? Explícalas a tus compañeros. </p>
                 <img src="../assets/img/diagnostico.png" />
 
+                <p class="my-3">Haz un listado de las palabras que conozcas y explícalas </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <el-input placeholder="Escribe un alimento o utensilio de cocina" v-model="item"
+                        @keydown.enter="addItem(item)">
+                        <template #append>
+                            <el-button v-model="item" :icon="ElIconPlus" @click="addItem(item)"> Añadir </el-button>
+                        </template>
+                    </el-input>
+                    <div class="flex items-center flex-wrap gap-2">
+                        <span v-if="items.length === 0">No has añadido ninguna palabra.</span>
+                        <el-tag v-for="item in items" :key="item" type="info" effect="plain" @close="removeItem($event)">{{
+                            item }}</el-tag>
+                    </div>
+                </div>
+
+
+                <div class="flex justify-between items-start mt-6">
+                    <h2 class="text-2xl font-bold mt-0 mb-4 pl-0">Parte 3</h2>
+                    <div class="flex items-center"><el-tag class="text-lg">Destrezas:
+                            <el-tooltip class="box-item" effect="dark" content="Comprensión y expresión escrita"
+                                placement="top">
+                                <el-icon class="top-[2px]">
+                                    <ElIconEditPen />
+                                </el-icon>
+                            </el-tooltip>
+                        </el-tag>
+                    </div>
+                </div>
+
+                <p>
+                    Por parejas, relacionad cada enfermedad/síntoma con la imagen correspondiente y la profesión que se
+                    ocupa de ello. Ponedlo en común con el resto de los compañeros.
+                </p>
+
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ilustración</th>
+                            <th>Enfermedad/síntoma</th>
+                            <th>Especialista</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(value, key) in ejercicio2" :key="key">
+                            <td><img :src="getAssetSrc(key)" alt="ilustracion1"></td>
+                            <td>
+                                <el-select v-model="value.enfermedad" :class="{
+                                    'wrong-answer': value.enfermedad && value.enfermedad !== answers['1'].enfermedad,
+                                    'good-answer': value.enfermedad === answers[key].enfermedad,
+                                }" placeholder="selecciona" size="small" clearable filterable>
+                                    <el-option v-for="item in options1" :key="item.value" :label="item.label"
+                                        :value="item.value" />
+                                </el-select>
+                            </td>
+                            <td>
+                                <el-select v-model="value.especialista" :class="{
+                                    'wrong-answer': value.especialista && value.especialista !== answers['1'].especialista,
+                                    'good-answer': value.especialista === answers[key].especialista,
+                                }" placeholder="selecciona" size="small" clearable filterable>
+                                    <el-option v-for="item in options2" :key="item.value" :label="item.label"
+                                        :value="item.value" />
+                                </el-select>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
                 <el-collapse v-model="verSolucion" accordion class="mt-6">
                     <el-collapse-item title="Solución" name="sol2">
 
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ilustración</th>
+                                    <th>Enfermedad/síntoma</th>
+                                    <th>Especialista</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(answer, key) in answers" :key="key">
+                                    <td><img :src="getAssetSrc(key)" alt="ilustracion1"></td>
+                                    <td>
+                                        {{ answer.enfermedad }}
+                                    </td>
+                                    <td>
+                                        {{ answer.especialista }}
+                                    </td>
+                                </tr>
 
+                            </tbody>
+                        </table>
                     </el-collapse-item>
                 </el-collapse>
             </el-card>
