@@ -32,6 +32,11 @@
             <div>Anna Gallart</div>
             <div>Ana Hontangas</div>
             <div>Ruth Salaverría</div>
+
+            <div class="text-xs text-grey mt-4 text-center">Todos los derechos reservados. <br /> La fuente de todas las
+                imágenes si no
+                se especifica lo
+                contrario es <a href="https://unsplash.com" class="underline">unsplash</a></div>
         </footer>
     </div>
 </template>

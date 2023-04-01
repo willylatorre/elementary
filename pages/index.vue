@@ -52,9 +52,10 @@
                 <br />
                 <nuxt-link to="/unidad-1#receta" class="underline">«Ñam-Ñam»</nuxt-link>, desarrollada por Ana
                 Hontangas.<br />
-                <nuxt-link to="/unidad-2#mercado" class="underline">«¿Qué me pasa, doctor?»</nuxt-link>, desarrollada por
+                <nuxt-link to="/unidad-2#mercado" class="underline">«Me duele todo...»</nuxt-link>, desarrollada por
                 Ruth Salaverría.<br />
-                <nuxt-link to="/unidad-2#mercado" class="underline">«El diagnóstico»</nuxt-link>, desarrollada por Ana
+                <nuxt-link to="/unidad-2#mercado" class="underline">«¿Qué me pasa, doctor?»</nuxt-link>, desarrollada por
+                Ana
                 Aedo. <br />
                 Página web, realizada por Anna
                 Gallart.
@@ -329,7 +330,7 @@
                                             </el-button>
                                         </div>
                                     </template>
-                                    En esta unidad repasaremos el léxico relacionado con la comida y el mercado.
+                                    En esta unidad repetiremos el léxico relacionado con la comida y el mercado.
                                     <ul class="mt-4">
                                         <li>
                                             <div class="dash"></div><span class="text-primary font-serif text-sm">Actividad
@@ -367,12 +368,11 @@
                                             </el-button>
                                         </div>
                                     </template>
-                                    En esta actividad repasaremos el vocabulario relacionado con la salud y el médico.
+                                    En esta unidad repetiremos el vocabulario relacionado con la salud y el médico.
                                     <ul class="mt-4">
                                         <li>
                                             <div class="dash"></div><span class="text-primary font-serif text-sm">Actividad
-                                                Voy
-                                                al médico:
+                                                Me duele todo... :
                                             </span>
                                             En esta actividad vamos a ir al médico y vamos a aprender vocabulario
                                             relacionado
@@ -381,8 +381,7 @@
                                         </li>
                                         <li>
                                             <div class="dash"></div><span class="text-primary font-serif text-sm">Actividad
-                                                ¡Entiendo el
-                                                informe médico: </span>
+                                                ¿Qué me pasa, doctor?: </span>
                                             En esta actividad vamos a aprender vocabulario relacionado con la salud y las
                                             interacciones.
                                         </li>
