@@ -26,7 +26,7 @@ const icons2 = [ElIconSchool, ElIconSchool, ElIconSchool]
                 actividad <br />
                 <span class="high leading-normal">ME DUELE TODO…</span>
             </h4>
-            <img src="../assets/img/photo-headache.jpg" class="inline-img" alt="cooking" />
+            <img src="/img/photo-headache.jpg" class="inline-img" alt="cooking" />
 
             <h3 class="font-serif font-bold text-primary text-xl mt-8">Información</h3>
 
@@ -44,7 +44,7 @@ const icons2 = [ElIconSchool, ElIconSchool, ElIconSchool]
                 <span class="high">¿QUÉ ME PASA, DOCTOR?</span>
             </h4>
 
-            <img src="../assets/img/photo-doctor2.jpg" class="inline-img" alt="cooking" />
+            <img src="/img/photo-doctor2.jpg" class="inline-img" alt="cooking" />
 
             <h3 class="font-serif font-bold text-primary text-xl mt-8">Información</h3>
             <InfoActividadDoctor />
@@ -102,7 +102,7 @@ const icons2 = [ElIconSchool, ElIconSchool, ElIconSchool]
 <style lang="scss" scoped>
 .block-img {
     &--health {
-        background-image: url('../assets/img/photo-doctor.jpg');
+        background-image: url('/img/photo-doctor.jpg');
     }
 }
 

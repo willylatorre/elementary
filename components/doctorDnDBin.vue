@@ -1,25 +1,35 @@
 <script setup>
 import { useDrop } from 'vue3-dnd'
-import dnd1image from "../assets/img/dnd1.jpg";
-import dnd2image from "../assets/img/dnd2.jpg";
-import dnd3image from "../assets/img/dnd3.jpg";
-import dnd4image from "../assets/img/dnd4.jpg";
-import dnd5image from "../assets/img/dnd5.jpg";
-import dnd6image from "../assets/img/dnd6.jpg";
-import dnd7image from "../assets/img/dnd7.jpg";
-import dnd8image from "../assets/img/dnd8.jpg";
+// import dnd1image from "../assets/img/dnd1.jpg";
+// import dnd2image from "../assets/img/dnd2.jpg";
+// import dnd3image from "../assets/img/dnd3.jpg";
+// import dnd4image from "../assets/img/dnd4.jpg";
+// import dnd5image from "../assets/img/dnd5.jpg";
+// import dnd6image from "../assets/img/dnd6.jpg";
+// import dnd7image from "../assets/img/dnd7.jpg";
+// import dnd8image from "../assets/img/dnd8.jpg";
+
+// const images = {
+//     "1": dnd1image,
+//     "2": dnd2image,
+//     "3": dnd3image,
+//     "4": dnd4image,
+//     "5": dnd5image,
+//     "6": dnd6image,
+//     "7": dnd7image,
+//     "8": dnd8image
+// }
 
 const images = {
-    "1": dnd1image,
-    "2": dnd2image,
-    "3": dnd3image,
-    "4": dnd4image,
-    "5": dnd5image,
-    "6": dnd6image,
-    "7": dnd7image,
-    "8": dnd8image
+    "1": '/img/dnd1.jpg',
+    "2": '/img/dnd2.jpg',
+    "3": '/img/dnd3.jpg',
+    "4": '/img/dnd4.jpg',
+    "5": '/img/dnd5.jpg',
+    "6": '/img/dnd6.jpg',
+    "7": '/img/dnd7.jpg',
+    "8": '/img/dnd8.jpg'
 }
-
 
 const props = defineProps({
     container: Number,

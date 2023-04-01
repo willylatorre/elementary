@@ -3,7 +3,8 @@ export default defineNuxtConfig({
 
     modules: [
         '@nuxtjs/tailwindcss',
-        '@element-plus/nuxt'
+        '@element-plus/nuxt',
+        '@nuxtjs/device'
     ],
 
     css: [

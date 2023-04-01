@@ -1,12 +1,4 @@
 <script setup>
-import ilustracion1 from "../assets/img/ilustracion1.png";
-import ilustracion2 from "../assets/img/ilustracion2.png";
-import ilustracion3 from "../assets/img/ilustracion3.png";
-import ilustracion4 from "../assets/img/ilustracion4.png";
-import ilustracion5 from "../assets/img/ilustracion5.png";
-import ilustracion6 from "../assets/img/ilustracion6.png";
-import ilustracion7 from "../assets/img/ilustracion7.png";
-
 const verSolucion = ref()
 
 const items = ref([])
@@ -23,13 +15,13 @@ const removeItem = (item) => {
 
 
 const images = {
-    "1": ilustracion1,
-    "2": ilustracion2,
-    "3": ilustracion3,
-    "4": ilustracion4,
-    "5": ilustracion5,
-    "6": ilustracion6,
-    "7": ilustracion7,
+    "1": "/img/ilustracion1.png",
+    "2": "/img/ilustracion2.png",
+    "3": "/img/ilustracion3.png",
+    "4": "/img/ilustracion4.png",
+    "5": "/img/ilustracion5.png",
+    "6": "/img/ilustracion6.png",
+    "7": "/img/ilustracion7.png",
 }
 
 const ejercicio = reactive({})
@@ -291,8 +283,8 @@ const options2 = [
 
 
                 <p> Observa el diagnóstico de la doctora. ¿Qué palabras conoces? Explícalas a tus compañeros. </p>
-                <img src="../assets/img/diagnostico.jpg" />
-                <img src="../assets/img/diagnostico2.jpg" />
+                <img src="/img/diagnostico.jpg" />
+                <img src="/img/diagnostico2.jpg" />
 
                 <p class="my-3">Haz un listado de las palabras que conozcas y explícalas </p>
 

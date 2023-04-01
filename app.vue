@@ -2,7 +2,9 @@
     <div class="min-h-[100vh] p-4 bg-bg">
         <div class="fixed top-0 left-0 bg-bg  w-full z-[100]">
             <nav class="p-3 flex flex-wrap justify-between items-center max-w-[840px] mx-auto min-h-[60px]">
-                <h3 class="text-[2rem]"><span class="high text-primary">TRIANA</span></h3>
+                <nuxt-link to="/">
+                    <h3 class="text-[2rem]"><span class="high text-primary">TRIANA</span></h3>
+                </nuxt-link>
                 <div class="flex items-center overflow-auto text-sm md:text-base" v-if="$route.path === '/'">
                     <a href="/#equipo">Equipo</a>
                     <span class="mx-2">/</span>

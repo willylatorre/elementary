@@ -2,9 +2,12 @@
 <script  setup>
 import { DndProvider } from 'vue3-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
+import { TouchBackend } from 'react-dnd-touch-backend'
+
 import Dustbin from './doctorDnDBin.vue'
 import Box from './doctorDnDBox.vue'
 
+const { isMobileOrTablet } = useDevice();
 
 const dustbins = ref([
     { accepts: 'box', id: 1, tags: [], answers: ['9', '11', '3'] },
@@ -50,40 +53,69 @@ const correctAnswers = computed(() => {
         return acc + bin.answers.filter(a => bin.tags.map(t => t.id).includes(a))?.length
     }, 0)
 })
+
 </script>
 
 <template>
     <div class="mt-6">
-        <DndProvider :backend="HTML5Backend">
-            <div class="flex">
-                <div class="flex-1">
-                    <span class="block mb-2 underline"><strong>Síntomas y dolores</strong></span>
-                    <Box v-for="(item, index) in boxes.filter(b => b.category === '1')" :id="item.id" :key="index"
-                        :name="item.name" :type="item.type" :category="item.category" class="block" />
+        <template v-if="isMobileOrTablet">
+            <DndProvider :backend="HTML5Backend" key="html45">
+                <div class="flex">
+                    <div class="flex-1">
+                        <span class="block mb-2 underline"><strong>Síntomas y dolores</strong></span>
+                        <Box v-for="(item, index) in boxes.filter(b => b.category === '1')" :id="item.id" :key="index"
+                            :name="item.name" :type="item.type" :category="item.category" class="block" />
+                    </div>
+                    <div class="flex-1">
+                        <span class="block mb-2 underline"><strong>Autodiagnósticos </strong></span>
+                        <Box v-for="(item, index) in boxes.filter(b => b.category === '2')" :id="item.id" :key="index"
+                            :name="item.name" :type="item.type" :category="item.category" class="block" />
+                    </div>
+
                 </div>
-                <div class="flex-1">
-                    <span class="block mb-2 underline"><strong>Autodiagnósticos </strong></span>
-                    <Box v-for="(item, index) in boxes.filter(b => b.category === '2')" :id="item.id" :key="index"
-                        :name="item.name" :type="item.type" :category="item.category" class="block" />
+                <div class="drop mt-4">
+                    <Dustbin v-for="bin in dustbins" :key="bin.id" :container="bin.id" @drop="handleDrop(bin.id, $event)"
+                        :tags="bin.tags" />
                 </div>
+                <div class="flex justify-end">
+                    <img src="/img/source.png" style="height:20px" />
+                </div>
+                <div class="flex items-center justify-end text-sm my-4">
+                    <el-progress class="w-[200px]" :text-inside="false" :stroke-width="6"
+                        :percentage="correctAnswers / 24 * 100" status="success" />
+                    {{ correctAnswers }} / {{ 24 }} respuestas correctas
+                </div>
+            </DndProvider>
+        </template>
+        <template v-else>
+            <DndProvider :backend="TouchBackend" key="touch">
+                <div class="flex">
+                    <div class="flex-1">
+                        <span class="block mb-2 underline"><strong>Síntomas y dolores</strong></span>
+                        <Box v-for="(item, index) in boxes.filter(b => b.category === '1')" :id="item.id" :key="index"
+                            :name="item.name" :type="item.type" :category="item.category" class="block" />
+                    </div>
+                    <div class="flex-1">
+                        <span class="block mb-2 underline"><strong>Autodiagnósticos </strong></span>
+                        <Box v-for="(item, index) in boxes.filter(b => b.category === '2')" :id="item.id" :key="index"
+                            :name="item.name" :type="item.type" :category="item.category" class="block" />
+                    </div>
 
-            </div>
-            <div class="drop mt-4">
-                <Dustbin v-for="bin in dustbins" :key="bin.id" :container="bin.id" @drop="handleDrop(bin.id, $event)"
-                    :tags="bin.tags" />
-            </div>
-            <div class="flex justify-end">
-                <img src="../assets/img/source.png" style="height:20px" />
-            </div>
-            <div class="flex items-center justify-end text-sm my-4">
-                <el-progress class="w-[200px]" :text-inside="false" :stroke-width="6"
-                    :percentage="correctAnswers / 24 * 100" status="success" />
-                {{ correctAnswers }} / {{ 24 }} respuestas correctas
-            </div>
-
-
-
-        </DndProvider>
+                </div>
+                <div class="drop mt-4">
+                    <Dustbin v-for="bin in dustbins" :key="bin.id" :container="bin.id" @drop="handleDrop(bin.id, $event)"
+                        :tags="bin.tags" />
+                </div>
+                <div class="flex justify-end">
+                    <img src="/img/source.png" style="height:20px" />
+                </div>
+                <div class="flex items-center justify-end text-sm my-4">
+                    <el-progress class="w-[200px]" :text-inside="false" :stroke-width="6"
+                        :percentage="correctAnswers / 24 * 100" status="success" />
+                    {{ correctAnswers }} / {{ 24 }} respuestas correctas
+                </div>
+            </DndProvider>
+        </template>
     </div>
 </template>
 

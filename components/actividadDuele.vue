@@ -2,15 +2,8 @@
 
 const verSolucion = ref()
 
-const items = ref([])
 const items2 = ref([])
-const item = ref('')
 const item2 = ref('')
-
-const addItem = (_item) => {
-    items.value.push(_item)
-    item.value = ''
-}
 
 const addItem2 = (_item) => {
     items2.value.push(_item)
@@ -72,8 +65,8 @@ const correctAnswers = computed(() => {
 
 
                 <div class="grid grid-cols-2">
-                    <img src="../assets/img/cuerpo1.jpg" class="max-w-[90%]" />
-                    <img src="../assets/img/cuerpo2.jpg" class="max-w-[90%]" />
+                    <img src="/img/cuerpo1.jpg" class="max-w-[90%]" />
+                    <img src="/img/cuerpo2.jpg" class="max-w-[90%]" />
                 </div>
 
 
@@ -124,22 +117,22 @@ const correctAnswers = computed(() => {
                     puedes utilizar el móvil para buscarla.
                 </p>
 
-                <!-- <ClientOnly>
-                    <DoctorDnD />
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        <el-input placeholder="Un síntoma/diagnóstico que conozcas" v-model="item2"
-                            @keydown.enter="addItem2(item2)">
-                            <template #append>
-                                <el-button v-model="item2" :icon="ElIconPlus" @click="addItem2(item2)"> Añadir </el-button>
-                            </template>
-                        </el-input>
-                        <div class="flex items-center flex-wrap gap-2">
-                            <span v-if="items2.length === 0">No has añadido ninguna palabra.</span>
-                            <el-tag v-for="item in items2" :key="item" type="danger" effect="plain" size="large">{{
-                                item }}</el-tag>
-                        </div>
+
+                <LazyDoctorDnD />
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <el-input placeholder="Un síntoma/diagnóstico que conozcas" v-model="item2"
+                        @keydown.enter="addItem2(item2)">
+                        <template #append>
+                            <el-button v-model="item2" :icon="ElIconPlus" @click="addItem2(item2)"> Añadir </el-button>
+                        </template>
+                    </el-input>
+                    <div class="flex items-center flex-wrap gap-2">
+                        <span v-if="items2.length === 0">No has añadido ninguna palabra.</span>
+                        <el-tag v-for="item in items2" :key="item" type="danger" effect="plain" size="large">{{
+                            item }}</el-tag>
                     </div>
-                </ClientOnly> -->
+                </div>
+
 
 
 
@@ -172,8 +165,7 @@ const correctAnswers = computed(() => {
 
                     <div class="flex flex-col">
                         <div class="flex justify-end h-[52px]">
-                            <img src="../assets/img/icon-cross.png"
-                                class="text-right mb-4 max-h-[52px] max-w-[52px] float-r" />
+                            <img src="/img/icon-cross.png" class="text-right mb-4 max-h-[52px] max-w-[52px] float-r" />
                         </div>
                         <el-button @click="setChoice('1', 'termometro')" type="danger" plain class="mb-4">
                             termómetro
@@ -194,8 +186,7 @@ const correctAnswers = computed(() => {
                     </div>
                     <div class="flex flex-col">
                         <div class="flex justify-end h-[52px]">
-                            <img src="../assets/img/icon-pill.png"
-                                class="text-right mb-4 max-h-[52px] max-w-[52px] float-r" />
+                            <img src="/img/icon-pill.png" class="text-right mb-4 max-h-[52px] max-w-[52px] float-r" />
                         </div>
                         <el-button @click="setChoice('2', 'venda')" type="danger" plain class="mb-4">
                             venda
@@ -217,8 +208,7 @@ const correctAnswers = computed(() => {
                     </div>
                     <div class="flex flex-col">
                         <div class="flex justify-end h-[52px]">
-                            <img src="../assets/img/icon-bandaid.png"
-                                class="text-right mb-4 max-h-[52px] max-w-[52px] float-r" />
+                            <img src="/img/icon-bandaid.png" class="text-right mb-4 max-h-[52px] max-w-[52px] float-r" />
                         </div>
                         <el-button @click="setChoice('3', 'tijeras')" type="danger" plain class="mb-4">
                             tijeras
@@ -240,8 +230,7 @@ const correctAnswers = computed(() => {
                     </div>
                     <div class="flex flex-col">
                         <div class="flex justify-end h-[52px]">
-                            <img src="../assets/img/icon-bottle.png"
-                                class="text-right mb-4 max-h-[52px] max-w-[52px] float-r" />
+                            <img src="/img/icon-bottle.png" class="text-right mb-4 max-h-[52px] max-w-[52px] float-r" />
                         </div>
                         <el-button @click="setChoice('4', 'alcohol')" type="danger" plain class="mb-4">
                             alcohol
