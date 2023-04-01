@@ -24,6 +24,8 @@ const getAssetSrc = (name) => {
 };
 
 
+
+
 const ejercicio = reactive({})
 const ejercicio2 = reactive({
     '1': {
@@ -84,6 +86,20 @@ const answers = reactive({
         'enfermedad': 'Rotura',
         'especialista': 'Traumatólogo',
     }
+})
+
+const correctAnswers = computed(() => {
+    return Object.entries(ejercicio2).reduce((acc, [key, value]) => {
+        if (value.enfermedad === answers[key].enfermedad) {
+            acc += 1
+        }
+
+        if (value.especialista === answers[key].especialista) {
+            acc += 1
+        }
+
+        return acc
+    }, 0)
 })
 
 const options1 = [
@@ -268,7 +284,7 @@ const options2 = [
                 <p class="my-3">Haz un listado de las palabras que conozcas y explícalas </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <el-input placeholder="Escribe un alimento o utensilio de cocina" v-model="item"
+                    <el-input placeholder="Escribe una palabra que has reconocido" v-model="item"
                         @keydown.enter="addItem(item)">
                         <template #append>
                             <el-button v-model="item" :icon="ElIconPlus" @click="addItem(item)"> Añadir </el-button>
@@ -276,13 +292,14 @@ const options2 = [
                     </el-input>
                     <div class="flex items-center flex-wrap gap-2">
                         <span v-if="items.length === 0">No has añadido ninguna palabra.</span>
-                        <el-tag v-for="item in items" :key="item" type="info" effect="plain" @close="removeItem($event)">{{
-                            item }}</el-tag>
+                        <el-tag v-for="item in items" :key="item" type="danger" effect="plain" size="large"
+                            @close="removeItem($event)">{{
+                                item }}</el-tag>
                     </div>
                 </div>
 
 
-                <div class="flex justify-between items-start mt-6">
+                <div class="flex justify-between items-start mt-10">
                     <h2 class="text-2xl font-bold mt-0 mb-4 pl-0">Parte 3</h2>
                     <div class="flex items-center"><el-tag class="text-lg">Destrezas:
                             <el-tooltip class="box-item" effect="dark" content="Comprensión y expresión escrita"
@@ -300,6 +317,11 @@ const options2 = [
                     ocupa de ello. Ponedlo en común con el resto de los compañeros.
                 </p>
 
+                <div class="flex items-center justify-end text-sm mb-4">
+                    <el-progress class="w-[200px]" :text-inside="false" :stroke-width="6"
+                        :percentage="correctAnswers / (Object.keys(answers).length * 2) * 100" status="success" />
+                    {{ correctAnswers }} / {{ (Object.keys(answers).length * 2) }} respuestas correctas
+                </div>
 
                 <table>
                     <thead>
@@ -334,6 +356,7 @@ const options2 = [
 
                     </tbody>
                 </table>
+                <span class="text-sm">Ilustraciones realizadas por Ana Aedo</span>
 
                 <el-collapse v-model="verSolucion" accordion class="mt-6">
                     <el-collapse-item title="Solución" name="sol2">

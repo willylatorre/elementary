@@ -145,8 +145,9 @@ const options = [{
                     </el-input>
                     <div class="flex items-center flex-wrap gap-2">
                         <span v-if="items.length === 0">No has añadido ninguna palabra.</span>
-                        <el-tag v-for="item in items" :key="item" type="info" effect="plain" @close="removeItem($event)">{{
-                            item }}</el-tag>
+                        <el-tag v-for="item in items" :key="item" type="danger" effect="plain" size="large"
+                            @close="removeItem($event)">{{
+                                item }}</el-tag>
                     </div>
                 </div>
 
@@ -177,6 +178,30 @@ const options = [{
                     </div>
 
                 </div>
+
+                <table class="my-6 max-w-[300px] text-sm mx-auto">
+                    <thead>
+                        <tr>
+                            <!-- <th width="50%">Ingredientes</th> -->
+                            <th width="50%">Palabras clave</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <!-- <td>
+                                                Tomate - pepino - pimiento - cebolla - ajo - pan -
+                                                aceite de oliva - vinagre - sal
+
+                                            </td> -->
+                            <td>
+                                kilo - diente - media - medio - cuchillo
+
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
 
                 <p class="leading-normal">
                     Para preparar el gazpacho necesitamos un <el-select v-model="ejercicio['1']" :class="{
