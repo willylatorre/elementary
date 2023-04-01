@@ -1,4 +1,11 @@
 <script setup>
+import ilustracion1 from "../assets/img/ilustracion1.png";
+import ilustracion2 from "../assets/img/ilustracion2.png";
+import ilustracion3 from "../assets/img/ilustracion3.png";
+import ilustracion4 from "../assets/img/ilustracion4.png";
+import ilustracion5 from "../assets/img/ilustracion5.png";
+import ilustracion6 from "../assets/img/ilustracion6.png";
+import ilustracion7 from "../assets/img/ilustracion7.png";
 
 const verSolucion = ref()
 
@@ -14,15 +21,16 @@ const removeItem = (item) => {
     items.value.splice(items.value.indexOf(item), 1)
 }
 
-const getAssetSrc = (name) => {
-    const path = `/assets/img/ilustracion${name}.png`;
-    const modules = import.meta.glob("/assets/img/*", { eager: true });
-    const mod = modules[path];
-    return mod?.default;
-};
 
-
-
+const images = {
+    "1": ilustracion1,
+    "2": ilustracion2,
+    "3": ilustracion3,
+    "4": ilustracion4,
+    "5": ilustracion5,
+    "6": ilustracion6,
+    "7": ilustracion7,
+}
 
 const ejercicio = reactive({})
 const ejercicio2 = reactive({
@@ -337,7 +345,7 @@ const options2 = [
                     </thead>
                     <tbody>
                         <tr v-for="(value, key) in ejercicio2" :key="key">
-                            <td><img :src="getAssetSrc(key)" alt="ilustracion1"></td>
+                            <td><img :src="images[key]" alt="ilustracion1"></td>
                             <td>
                                 <el-select v-model="value.enfermedad" :class="{
                                     'wrong-answer': value.enfermedad && value.enfermedad !== answers['1'].enfermedad,
@@ -375,7 +383,7 @@ const options2 = [
                             </thead>
                             <tbody>
                                 <tr v-for="(answer, key) in answers" :key="key">
-                                    <td><img :src="getAssetSrc(key)" alt="ilustracion1"></td>
+                                    <td><img :src="images[key]" alt="ilustracion1"></td>
                                     <td>
                                         {{ answer.enfermedad }}
                                     </td>

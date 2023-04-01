@@ -17,21 +17,6 @@ const addItem2 = (_item) => {
     item2.value = ''
 }
 
-
-const removeItem = (item) => {
-    items.value.splice(items.value.indexOf(item), 1)
-}
-
-const getAssetSrc = (name) => {
-    const path = `/assets/img/ilustracion${name}.png`;
-    const modules = import.meta.glob("/assets/img/*", { eager: true });
-    const mod = modules[path];
-    return mod?.default;
-};
-
-
-
-
 const ejercicio = reactive({
     '1': '',
     '2': '',
@@ -52,9 +37,6 @@ const setChoice = (id, choice) => {
 const correctAnswers = computed(() => {
     return Object.keys(ejercicio).filter((key) => ejercicio[key] === answers[key]).length
 })
-
-
-
 </script>
 
 <template>
