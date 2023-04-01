@@ -124,7 +124,7 @@ const correctAnswers = computed(() => {
                     puedes utilizar el móvil para buscarla.
                 </p>
 
-                <ClientOnly>
+                <!-- <ClientOnly>
                     <DoctorDnD />
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <el-input placeholder="Un síntoma/diagnóstico que conozcas" v-model="item2"
@@ -139,7 +139,7 @@ const correctAnswers = computed(() => {
                                 item }}</el-tag>
                         </div>
                     </div>
-                </ClientOnly>
+                </ClientOnly> -->
 
 
 
