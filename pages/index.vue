@@ -56,7 +56,7 @@
                 Ruth Salaverría.<br />
                 <nuxt-link to="/unidad-2#mercado" class="underline">«¿Qué me pasa, doctor?»</nuxt-link>, desarrollada por
                 Ana
-                Aedo. <br />
+                Aedo. <br /><br /><br />
                 Página web, realizada por Anna
                 Gallart.
             </p>
@@ -120,41 +120,46 @@
                         </p>
                         <ul>
                             <li>
-                                <div class="dash"></div><span class="text-primary font-serif text-sm">Tamaño del
+                                <div class="dash"></div><span class="text-primary font-serif text-sm uppercase">Tamaño del
                                     grupo:</span> Diez
                                 personas.
                             </li>
                             <li>
-                                <div class="dash"></div><span class="text-primary font-serif text-sm">Contexto
+                                <div class="dash"></div><span class="text-primary font-serif text-sm uppercase">Contexto
                                     educativo:</span>
                                 Clases de inmersión para jóvenes adultos de distintas edades en una academia de idiomas.
                             </li>
                             <li>
-                                <div class="dash"></div><span class="text-primary font-serif text-sm">Número de
+                                <div class="dash"></div><span class="text-primary font-serif text-sm uppercase">Número de
                                     horas:</span> 45 minutos de clase, tres veces por semana.
                             </li>
                             <li>
-                                <div class="dash"></div><span class="text-primary font-serif text-sm">Nivel:</span> Clases
+                                <div class="dash"></div><span
+                                    class="text-primary font-serif text-sm uppercase">Nivel:</span> Clases
                                 para un nivel A2. Algunos alumnos tienen un dominio consolidado del nivel A1 y otros
                                 presentan algunas lagunas no muy significativas. Utilizan frases y palabras del ámbito
                                 coloquial adquiridas durante visitas turísticas previas.
                             </li>
                             <li>
-                                <div class="dash"></div><span class="text-primary font-serif text-sm">Nacionalidad:</span>
+                                <div class="dash"></div><span
+                                    class="text-primary font-serif text-sm uppercase">Nacionalidad:</span>
                                 Holandesa.
                             </li>
                             <li>
-                                <div class="dash"></div><span class="text-primary font-serif text-sm">Otros idiomas:</span>
+                                <div class="dash"></div><span class="text-primary font-serif text-sm uppercase">Otros
+                                    idiomas:</span>
                                 Lengua materna holandés y nivel avanzado de inglés.
                             </li>
                             <li>
-                                <div class="dash"></div><span
-                                    class="text-primary font-serif text-sm">Objetivo:</span>Desenvolverse en actividades
+                                <div class="dash"></div><span class="text-primary font-serif text-sm uppercase">Objetivo:
+                                </span>Desenvolverse en
+                                actividades
                                 comunes del día a día, conocer la Costa Mediterránea y su cultura. Aprender español.
                             </li>
                             <li>
-                                <div class="dash"></div><span
-                                    class="text-primary font-serif text-sm">Materiales:</span>Materiales de elaboración
+                                <div class="dash"></div><span class="text-primary font-serif text-sm uppercase">Materiales:
+                                </span>Materiales de
+                                elaboración
                                 propia adecuados a la actividad del contexto situacional.
                             </li>
                         </ul>
@@ -188,7 +193,7 @@
                                 esta web se comparten una serie de actividades para el aprendizaje de vocabulario,
                                 concretamente de palabras, según la tipología de J. R. Gómez Molina <a
                                     href="https://cvc.cervantes.es/ensenanza/biblioteca_ele/carabela/pdf/56/56_027.pdf"
-                                    target="_new">[Las unidades léxicas en
+                                    target="_new" class="underline">[Las unidades léxicas en
                                     español (2004)]</a>.
                             </li>
                             <li>

@@ -17,7 +17,7 @@
                 <td class="info-grid__header">Duración</td>
                 <td class="info-grid__cell"><el-icon class="mr-1 top-[2px]">
                         <ElIconClock />
-                    </el-icon>20 minutos.</td>
+                    </el-icon>45 minutos.</td>
             </tr>
             <tr>
                 <td class="info-grid__header">Tipo de actividad:</td>
@@ -70,4 +70,5 @@
                 </td>
             </tr>
         </tbody>
-</table></template>
+    </table>
+</template>

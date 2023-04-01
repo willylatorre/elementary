@@ -17,9 +17,7 @@ const removeItem = (item) => {
 const getAssetSrc = (name) => {
     const path = `/assets/img/ilustracion${name}.png`;
     const modules = import.meta.glob("/assets/img/*", { eager: true });
-    console.log(modules)
     const mod = modules[path];
-    console.log(path)
     return mod?.default;
 };
 
@@ -139,10 +137,10 @@ const options2 = [
                     <h2 class="text-2xl font-bold mb-4 pl-0">Parte 1</h2>
 
                     <div class="flex items-center"><el-tag size="large" class="text-lg">Destrezas:
-                            <el-tooltip class="box-item" effect="dark" content="Comprensión y expresión oral"
+                            <el-tooltip class="box-item" effect="dark" content="Comprensión y expresión escrita"
                                 placement="top">
                                 <el-icon class="mr-2 top-[2px]">
-                                    <ElIconChatLineRound />
+                                    <ElIconEditPen />
                                 </el-icon>
                             </el-tooltip>
 
@@ -267,10 +265,16 @@ const options2 = [
                 <div class="flex justify-between items-start mt-6">
                     <h2 class="text-2xl font-bold mt-0 mb-4 pl-0">Parte 2</h2>
                     <div class="flex items-center"><el-tag class="text-lg">Destrezas:
-                            <el-tooltip class="box-item" effect="dark" content="Comprensión y expresión escrita"
+                            <el-tooltip class="box-item" effect="dark" content="Comprensión y expresión oral"
                                 placement="top">
+                                <el-icon class="mr-2 top-[2px]">
+                                    <ElIconChatLineRound />
+                                </el-icon>
+                            </el-tooltip>
+
+                            <el-tooltip class="box-item" effect="dark" content="Comprensión lectora" placement="top">
                                 <el-icon class="top-[2px]">
-                                    <ElIconEditPen />
+                                    <ElIconNotebook />
                                 </el-icon>
                             </el-tooltip>
                         </el-tag>
@@ -279,7 +283,8 @@ const options2 = [
 
 
                 <p> Observa el diagnóstico de la doctora. ¿Qué palabras conoces? Explícalas a tus compañeros. </p>
-                <img src="../assets/img/diagnostico.png" />
+                <img src="../assets/img/diagnostico.jpg" />
+                <img src="../assets/img/diagnostico2.jpg" />
 
                 <p class="my-3">Haz un listado de las palabras que conozcas y explícalas </p>
 
@@ -302,8 +307,7 @@ const options2 = [
                 <div class="flex justify-between items-start mt-10">
                     <h2 class="text-2xl font-bold mt-0 mb-4 pl-0">Parte 3</h2>
                     <div class="flex items-center"><el-tag class="text-lg">Destrezas:
-                            <el-tooltip class="box-item" effect="dark" content="Comprensión y expresión escrita"
-                                placement="top">
+                            <el-tooltip class="box-item" effect="dark" content="Comprensión escrita" placement="top">
                                 <el-icon class="top-[2px]">
                                     <ElIconEditPen />
                                 </el-icon>
