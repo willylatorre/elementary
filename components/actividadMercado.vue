@@ -31,11 +31,11 @@ const ejercicio = reactive({
 
 const answers = reactive({
     'fresco': 'warning',
-    'tomate': 'primary',
+    'tomate': 'danger',
     'zanahoria': 'success',
     'pimiento': 'success',
-    'sandia-1': 'primary',
-    'sandia-2': 'primary',
+    'sandia-1': 'danger',
+    'sandia-2': 'danger',
     'dulce': 'warning',
     'crujiente': 'warning',
     'pepino-1': 'success',
@@ -51,8 +51,8 @@ const answers = reactive({
     'tres': 'info',
     'dos-1': 'info',
     'dos-2': 'info',
-    'manzana': 'primary',
-    'melon': 'primary',
+    'manzana': 'danger',
+    'melon': 'danger',
     'grande': 'warning'
 })
 
@@ -75,7 +75,7 @@ const categories = [
     },
     {
         label: 'Frutas',
-        value: 'primary'
+        value: 'danger'
     },
     {
         label: 'Números/Medidas',
@@ -118,7 +118,7 @@ const categories = [
                 </p>
                 <div class="flex items-center justify-between  mb-10 mt-2 text-sm">
                     <div class="flex gap-2">
-                        <el-tag type="primary">FRUTA</el-tag>
+                        <el-tag type="danger">FRUTA</el-tag>
                         <el-tag type="success">VERDURA</el-tag>
                         <el-tag type="info">UNIDAD/MEDIDA</el-tag>
                         <el-tag type="warning">ADJETIVO</el-tag>
@@ -579,7 +579,7 @@ const categories = [
                         <div class="flex flex-wrap">
                             <div class="flex-1">
 
-                                <el-tag type="primary">FRUTA</el-tag> <br />
+                                <el-tag type="danger">FRUTA</el-tag> <br />
                                 tomate<br />
                                 sandia (x2 veces)<br />
                                 manzana<br />

@@ -12,7 +12,7 @@
                     <span class="mx-2">/</span>
                     <a href="/#actividades">Actividades</a>
                 </div>
-                <nuxt-link to="/" class="text-dark text-xs" v-else>
+                <nuxt-link to="/#actividades" class="text-dark text-xs" v-else>
                     <el-icon class="mr-2">
                         <ElIconArrowLeftBold />
                     </el-icon>

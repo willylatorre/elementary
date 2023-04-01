@@ -6,6 +6,14 @@
         </colgroup>
         <tbody>
             <tr>
+                <td class="info-grid__header">Título</td>
+                <td class="info-grid__cell">Me duele todo…</td>
+            </tr>
+            <tr>
+                <td class="info-grid__header">Autor</td>
+                <td class="info-grid__cell">Ruth Salaverría</td>
+            </tr>
+            <tr>
                 <td class="info-grid__header">Duración</td>
                 <td class="info-grid__cell"><el-icon class="mr-1 top-[2px]">
                         <ElIconClock />
@@ -73,11 +81,12 @@
                     relaciones asociativas por el significado de un grupo de palabras y descubrir al intruso, aquella
                     palabra que no pertenece al mismo campo léxico que el resto. El alumno puede utilizar el Diccionario
                     esencial de la Lengua Española (RAE) para encontrar el significado de los términos que no conozca.
-                Tras compartir los resultados, si queda tiempo hablaremos de más objetos que tienen en sus botiquines de
-                casa y así poder ampliar ese vocabulario propuesto
+                    Tras compartir los resultados, si queda tiempo hablaremos de más objetos que tienen en sus botiquines de
+                    casa y así poder ampliar ese vocabulario propuesto
 
 
-            </td>
-        </tr>
-    </tbody>
-</table></template>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</template>

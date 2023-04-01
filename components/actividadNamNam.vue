@@ -145,7 +145,8 @@ const options = [{
                     </el-input>
                     <div class="flex items-center flex-wrap gap-2">
                         <span v-if="items.length === 0">No has añadido ninguna palabra.</span>
-                        <el-tag v-for="item in items" :key="item" closable @close="removeItem($event)">{{ item }}</el-tag>
+                        <el-tag v-for="item in items" :key="item" type="info" effect="plain" @close="removeItem($event)">{{
+                            item }}</el-tag>
                     </div>
                 </div>
 

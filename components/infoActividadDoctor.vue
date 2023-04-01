@@ -6,6 +6,14 @@
         </colgroup>
         <tbody>
             <tr>
+                <td class="info-grid__header">Título</td>
+                <td class="info-grid__cell">¿Qué me pasa, doctor?</td>
+            </tr>
+            <tr>
+                <td class="info-grid__header">Autor</td>
+                <td class="info-grid__cell">Ana Aedo</td>
+            </tr>
+            <tr>
                 <td class="info-grid__header">Duración</td>
                 <td class="info-grid__cell"><el-icon class="mr-1 top-[2px]">
                         <ElIconClock />
