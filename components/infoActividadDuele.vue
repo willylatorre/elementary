@@ -39,6 +39,12 @@
                 </td>
             </tr>
             <tr>
+                <td class="info-grid__header">Material</td>
+                <td class="info-grid__cell">Diccionario esencial de la lengua española (RAE, 2006).
+
+                </td>
+            </tr>
+            <tr>
                 <td class="info-grid__header">Contenidos</td>
                 <td class="info-grid__cell">Competencia léxico-semántica: léxico relacionado con la salud. <br />
                     Competencia gramatical: repaso del verbo tener y del reflexivo doler. Practicar la conjugación del verbo
