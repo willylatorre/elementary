@@ -54,9 +54,9 @@
                 <br />
                 <nuxt-link to="/unidad-1#receta" class="underline">«Ñam-Ñam»</nuxt-link>, desarrollada por Ana
                 Hontangas.<br />
-                <nuxt-link to="/unidad-2#mercado" class="underline">«Me duele todo...»</nuxt-link>, desarrollada por
+                <nuxt-link to="/unidad-2#duele" class="underline">«Me duele todo...»</nuxt-link>, desarrollada por
                 Ruth Salaverría.<br />
-                <nuxt-link to="/unidad-2#mercado" class="underline">«¿Qué me pasa, doctor?»</nuxt-link>, desarrollada por
+                <nuxt-link to="/unidad-2#doctor" class="underline">«¿Qué me pasa, doctor?»</nuxt-link>, desarrollada por
                 Ana
                 Aedo. <br /><br /><br />
                 Página web, realizada por Anna

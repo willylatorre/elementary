@@ -20,7 +20,7 @@
                     </el-icon>25 minutos.</td>
             </tr>
             <tr>
-                <td class="info-grid__header">Tipo de actividad:</td>
+                <td class="info-grid__header">Tipo de actividad</td>
                 <td class="info-grid__cell">Representación de una visita al mercado. <br />
                     Reflexión de léxico.<br />
                     Visita real al mercado.
@@ -54,9 +54,9 @@
             </tr>
             <tr>
                 <td class="info-grid__header">Estrategias</td>
-                <td class="info-grid__cell">Realizar categorización del vocabulario
-                    Ejercicio de transferencia de su lengua materna
-                    Inmersión
+                <td class="info-grid__cell">Realizar categorización del vocabulario. <br />
+                    Ejercicio de transferencia de su lengua materna. <br />
+                    Inmersión.
                 </td>
             </tr>
             <tr>

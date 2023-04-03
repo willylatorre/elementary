@@ -21,7 +21,7 @@ const icons2 = [ElIconSchool, ElIconSchool, ElIconSchool]
             </div>
         </section>
 
-        <section class="mt-4" id="receta">
+        <section class="mt-4" id="duele">
             <h4 class="bg-bg rounded-br-xl pr-3 pb-3">
                 actividad <br />
                 <span class="high leading-normal">ME DUELE TODO…</span>
@@ -38,7 +38,7 @@ const icons2 = [ElIconSchool, ElIconSchool, ElIconSchool]
 
         </section>
 
-        <section class="mt-10" id="mercado">
+        <section class="mt-10" id="doctor">
             <h4 class="bg-bg rounded-br-xl pr-3 pb-3 max-w-[520px]">
                 actividad <br />
                 <span class="high">¿QUÉ ME PASA, DOCTOR?</span>

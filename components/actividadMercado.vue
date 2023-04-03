@@ -137,7 +137,7 @@ const categories = [
                     <el-icon class="top-[2px] mr-1">
                         <ElIconShoppingCart />
                     </el-icon>Dependiente
-                </el-tag>¡Hola! Buenas tardes y bienvenido a verdulería García. ¿En qué puedo
+                </el-tag>¡Hola! Buenas tardes y bienvenido a Verdulería García. ¿En qué puedo
                 ayudarte hoy?
                 <br />
                 <el-tag effect="plain" class="mr-[32px]" type="info">
@@ -264,14 +264,13 @@ const categories = [
                         </el-select>
                     </div>
 
-                </el-popover>. ¿Cuántas
-                quieres?
+                </el-popover>. ¿Quieres una?
                 <br />
                 <el-tag effect="plain" class="mr-[32px]" type="info">
                     <el-icon class="top-[2px] mr-1">
                         <ElIconUser />
                     </el-icon>Cliente
-                </el-tag> Me pones <el-popover placement="bottom" :width="200" trigger="click">
+                </el-tag> No, no. Ponme <el-popover placement="bottom" :width="200" trigger="click">
                     <template #reference>
                         <el-button class="fake-button" :class="{
                             'fake-button--dark': !ejercicio['media']
@@ -337,7 +336,7 @@ const categories = [
                         </el-select>
                     </div>
 
-                </el-popover>para cocinar el gazpacho. ¿Cuánto cuestan? <br />
+                </el-popover> para cocinar el gazpacho. ¿Cuánto cuestan? <br />
                 <el-tag effect="plain" class="mr-2">
                     <el-icon class="top-[2px] mr-1">
                         <ElIconShoppingCart />
@@ -359,12 +358,12 @@ const categories = [
                 </el-popover> cuestan <el-popover placement="bottom" :width="200" trigger="click">
                     <template #reference>
                         <el-button class="fake-button" :class="{
-                            'fake-button--dark': !ejercicio['dos-2']
-                        }" :link="!ejercicio['dos-2']" :type="ejercicio['dos-2']">dos</el-button>
+                            'fake-button--dark': !ejercicio['cuatro']
+                        }" :link="!ejercicio['cuatro']" :type="ejercicio['cuatro']">cuatro</el-button>
                     </template>
                     <div>
                         <span class="text-xs block">Selecciona una categoría</span>
-                        <el-select v-model="ejercicio['dos-2']" placeholder="Categoría" size="small">
+                        <el-select v-model="ejercicio['cuatro']" placeholder="Categoría" size="small">
                             <el-option v-for="item in categories" :key="item.value" :label="item.label"
                                 :value="item.value" />
                         </el-select>
@@ -401,12 +400,12 @@ const categories = [
                 </el-popover> <el-popover placement="bottom" :width="200" trigger="click">
                     <template #reference>
                         <el-button class="fake-button" :class="{
-                            'fake-button--dark': !ejercicio['cuatro']
-                        }" :link="!ejercicio['cuatro']" :type="ejercicio['cuatro']">cuatro</el-button>
+                            'fake-button--dark': !ejercicio['dos-2']
+                        }" :link="!ejercicio['dos-2']" :type="ejercicio['dos-2']">dos</el-button>
                     </template>
                     <div>
                         <span class="text-xs block">Selecciona una categoría</span>
-                        <el-select v-model="ejercicio['cuatro']" placeholder="Categoría" size="small">
+                        <el-select v-model="ejercicio['dos-2']" placeholder="Categoría" size="small">
                             <el-option v-for="item in categories" :key="item.value" :label="item.label"
                                 :value="item.value" />
                         </el-select>
@@ -425,7 +424,7 @@ const categories = [
                                 :value="item.value" />
                         </el-select>
                     </div>
-                </el-popover>. ¿Cuánto quieres? <br />
+                </el-popover>. ¿Qué te pongo? <br />
                 <el-tag effect="plain" class="mr-[32px]" type="info">
                     <el-icon class="top-[2px] mr-1">
                         <ElIconUser />
@@ -532,8 +531,8 @@ const categories = [
                     <el-icon class="top-[2px] mr-1">
                         <ElIconShoppingCart />
                     </el-icon>Dependiente
-                </el-tag> Muy bien, aquí las tienes. ¿necesitas una
-                bolas
+                </el-tag> Muy bien, aquí las tienes. ¿Necesitas una
+                bolsa
                 ? <br />
                 <el-tag effect="plain" class="mr-[32px]" type="info">
                     <el-icon class="top-[2px] mr-1">
