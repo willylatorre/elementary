@@ -97,7 +97,7 @@ const options2 = ref([
     { name: 'Gastroentiritis', id: '10', type: 'box', category: '2' },
     { name: 'Catarro', id: '11', type: 'box', category: '2' },
     { name: 'Alergia', id: '12', type: 'box', category: '2' },
-    { name: 'Intoxiación', id: '13', type: 'box', category: '2' },
+    { name: 'Intoxicación', id: '13', type: 'box', category: '2' },
     { name: 'Migraña', id: '14', type: 'box', category: '2' },
     { name: 'COVID', id: '15', type: 'box', category: '2' },
     { name: 'Anginas', id: '16', type: 'box', category: '2' },
