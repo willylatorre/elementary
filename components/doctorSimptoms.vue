@@ -1,7 +1,7 @@
 
 <script  setup>
 import Dustbin from './doctorDnDBin.vue'
-// import Box from './doctorDnDBox.vue'
+const verSolucion = ref()
 
 const dustbins = ref([
     { accepts: 'box', id: 1, answers: ['9', '11', '3'] },
@@ -46,8 +46,6 @@ const responses3 = ref({
     7: '',
     8: ''
 })
-
-
 
 const tagTypes = ref({
     '1': {
@@ -183,6 +181,94 @@ const correctAnswers = computed(() => {
     <div class="flex justify-end">
         <img src="/img/source.png" style="height:20px" />
     </div>
+
+    <el-collapse v-model="verSolucion" accordion class="mt-6">
+        <el-collapse-item title="Solución" name="sol2">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="min-width:50px">Imagen</th>
+                        <th>Síntoma</th>
+                        <th>Autodiagnósticos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/img/dnd1.jpg" width="42" class="mx-auto" />
+                        </td>
+                        <td>Tengo tos</td>
+                        <td>
+                            Gripe, catarro
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="/img/dnd2.jpg" width="42" class="mx-auto" />
+                        </td>
+                        <td>Tengo fiebre</td>
+                        <td>
+                            Gripe, COVID
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="/img/dnd3.jpg" width="42" class="mx-auto" />
+                        </td>
+                        <td>Quiero vomitar</td>
+                        <td>
+                            Gastroenteritis, intoxicación
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="/img/dnd4.jpg" width="42" class="mx-auto" />
+                        </td>
+                        <td>Me duele la tripa</td>
+                        <td>
+                            Gastroenteritis, intoxicación
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="/img/dnd5.jpg" width="42" class="mx-auto" />
+                        </td>
+                        <td>Me duele la garganta</td>
+                        <td>
+                            Anginas, COVID
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="/img/dnd6.jpg" width="42" class="mx-auto" />
+                        </td>
+                        <td>Tengo diarrea</td>
+                        <td>
+                            Gastroenteritis, intoxicación
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="/img/dnd7.jpg" width="42" class="mx-auto" />
+                        </td>
+                        <td>Tengo mocos y estornudos</td>
+                        <td>
+                            Alergia, catarro
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="/img/dnd8.jpg" width="42" class="mx-auto" />
+                        </td>
+                        <td>Me duele la cabeza</td>
+                        <td>
+                            Migraña, COVID
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </el-collapse-item>
+    </el-collapse>
 </template>
 
 <style lang="scss" scoped>
