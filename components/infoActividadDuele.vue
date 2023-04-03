@@ -53,7 +53,7 @@
             </tr>
             <tr>
                 <td class="info-grid__header">Material</td>
-                <td class="info-grid__cell italic">Diccionario esencial de la lengua española (RAE, 2006).
+                <td class="info-grid__cell italic"><i>Diccionario esencial de la Lengua Española</i> (RAE, 2006).
 
                 </td>
             </tr>
@@ -89,7 +89,7 @@
                     relaciones asociativas por el significado de un grupo de palabras y descubrir al intruso, aquella
                     palabra que no pertenece al mismo campo léxico que el resto. El alumno puede utilizar el <span
                         class="italic">Diccionario
-                        esencial de la Lengua Española (RAE)</span> para encontrar el significado de los términos que no
+                        esencial de la Lengua Española</span> (RAE) para encontrar el significado de los términos que no
                     conozca.
                     Tras compartir los resultados, si queda tiempo hablaremos de más objetos que tienen en sus botiquines de
                     casa y así poder ampliar ese vocabulario propuesto

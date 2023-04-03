@@ -94,7 +94,7 @@ const options1 = ref([
 
 const options2 = ref([
     { name: 'Gripe', id: '9', type: 'box', category: '2' },
-    { name: 'Gastroentiritis', id: '10', type: 'box', category: '2' },
+    { name: 'Gastroenteritis', id: '10', type: 'box', category: '2' },
     { name: 'Catarro', id: '11', type: 'box', category: '2' },
     { name: 'Alergia', id: '12', type: 'box', category: '2' },
     { name: 'Intoxicación', id: '13', type: 'box', category: '2' },

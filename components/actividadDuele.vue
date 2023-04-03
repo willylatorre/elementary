@@ -131,7 +131,7 @@ const correctAnswers = computed(() => {
                 <p>— SÍNTOMAS Y DOLORES. Dentro de la primera serie de palabras, busca su correspondiente imagen
                     relacionada con síntomas y dolores frecuentes.</p>
                 <p> — DIAGNÓSTICOS. Haz tu propio diagnóstico y relaciona la enfermedad con su imagen correspondiente.
-                    Cada fotografía puede relacionarse con <strong>2</strong> enfermedades.</p>
+                    Cada fotografía puede relacionarse con dos enfermedades.</p>
                 <p>— DIÁLOGO. Cuando hayas terminado, inicia una conversación con tu compañero para expresar dolor. (¿Qué
                     te pasa? Me duele…). </p>
 
@@ -175,7 +175,7 @@ const correctAnswers = computed(() => {
                 <p>
                     Jan ha buscado en el botiquín de casa algún remedio para mejorar su malestar. Pero también ha encontrado
                     cosas que no deberían estar allí guardadas. Descubre al intruso que se ha colado en la caja de las
-                    medicinas. Puedes usar el <span class="italic">Diccionario esencial de la Lengua Española (RAE)</span>
+                    medicinas. Puedes usar el <span class="italic">Diccionario esencial de la Lengua Española </span>(RAE)
                     para encontrar el significado
                     de las palabras que no conozcas.
                 </p>
@@ -238,8 +238,8 @@ const correctAnswers = computed(() => {
                         <el-button @click="setChoice('3', 'tijeras')" type="danger" plain class="mb-4">
                             tijeras
                         </el-button>
-                        <el-button @click="setChoice('3', 'iodo')" type="danger" plain class="mb-4">
-                            iodo
+                        <el-button @click="setChoice('3', 'yodo')" type="danger" plain class="mb-4">
+                            yodo
                         </el-button>
                         <el-button @click="setChoice('3', 'Lápiz')"
                             :type="ejercicio['3'] === answers['3'] ? 'success' : 'danger'" plain class="mb-4">
