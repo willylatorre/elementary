@@ -181,7 +181,7 @@ const options2 = [
                     <el-icon class="top-[2px] mr-1">
                         <ElIconSuitcaseLine />
                     </el-icon>Doctora
-                </el-tag> ¿Qué comiste ayer? <br />
+                </el-tag> ¿Qué comió ayer? <br />
                 <el-tag effect="plain" class="mr-2">
                     <el-icon class="top-[2px] mr-1">
                         <ElIconUser />

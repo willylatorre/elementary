@@ -20,8 +20,9 @@
                     </el-icon>45 minutos.</td>
             </tr>
             <tr>
-                <td class="info-grid__header">Tipo de actividad:</td>
-                <td class="info-grid__cell">Repaso del léxico burocrático. Repaso de léxico relacionado con las enfermedades
+                <td class="info-grid__header">Tipo de actividad</td>
+                <td class="info-grid__cell">Repaso del léxico burocrático. Repaso de léxico relacionado con las
+                    enfermedades.
                 </td>
             </tr>
             <tr>
@@ -38,7 +39,7 @@
             </tr>
             <tr>
                 <td class="info-grid__header">Contenidos</td>
-                <td class="info-grid__cell">Competencia léxico-semántico: comprender un diagnóstico médico y conocimiento de
+                <td class="info-grid__cell">Competencia léxico-semántica: comprender un diagnóstico médico y conocimiento de
                     diferentes enfermedades y/o síntomas.</td>
             </tr>
             <tr>
@@ -66,9 +67,9 @@
                     una comparación de las palabras con las de su lengua materna. <br />
                     Por último, se concluye el ejercicio con un asociograma que deben completar con diferentes enfermedades
                     y/o síntomas y sus respectivos médicos especialistas. De esta manera, aprenderán léxico específico de
-                    diferentes áreas de la medicina
+                    diferentes áreas de la medicina y que cuyo significado podrán deducirlo también gracias a su lengua
+                    materna o a su nivel avanzado de inglés.
                 </td>
             </tr>
         </tbody>
-    </table>
-</template>
+</table></template>

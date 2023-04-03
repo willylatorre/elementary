@@ -20,7 +20,7 @@
                     </el-icon>45 minutos.</td>
             </tr>
             <tr>
-                <td class="info-grid__header">Tipo de actividad:</td>
+                <td class="info-grid__header">Tipo de actividad</td>
                 <td class="info-grid__cell">Práctica y reflexión del léxico.</td>
             </tr>
             <tr>

@@ -10,7 +10,7 @@
                     ¡Hola!
                     <span class="font-serif font-bold font-dark">somos TRIANA</span>, un centro valenciano de enseñanza de
                     español para extranjeros. Pero, sobre todo, somos un
-                    equipo de cuatro mujeres apasionadas con la cultura y la lengua española que disfrutamos compartiendo,
+                    equipo de cuatro mujeres apasionadas de la cultura y la lengua española que disfrutamos compartiendo,
                     enseñando y aprendiendo con nuestros estudiantes de todo el mundo.
                 </p>
                 <a href="#actividades" class="text-primary link">
@@ -33,7 +33,9 @@
                 <span class="high">TRIANA</span> somos Ruth y un trío de Anas.
             </p>
             <p>
-                Esta actividad grupal que nos ha unido forma parte de la asignatura La Competencia Léxica en el Aprendizaje
+                Esta actividad grupal que nos ha unido forma parte de la asignatura &lt;&lt;La Competencia Léxica&gt;&gt; en
+                el
+                Aprendizaje
                 de ELE. En ella los distintos bagajes profesionales de cada una de nosotras han nutrido la actividad y
                 enriquecido todo el progreso creativo y productivo
             </p>
@@ -154,7 +156,7 @@
                                 <div class="dash"></div><span class="text-primary font-serif text-sm uppercase">Objetivo:
                                 </span>Desenvolverse en
                                 actividades
-                                comunes del día a día, conocer la Costa Mediterránea y su cultura. Aprender español.
+                                comunes del día a día, conocer la costa mediterránea y su cultura. Aprender español.
                             </li>
                             <li>
                                 <div class="dash"></div><span class="text-primary font-serif text-sm uppercase">Materiales:
@@ -253,7 +255,7 @@
                                             </el-icon>Alimentación y salud</span>
                                     </div>
                                 </template>
-                                Aprender el campo léxico de los temas alimentación y salud
+                                Aprender el campo léxico de los temas alimentación y salud.
 
 
                             </el-card>
@@ -299,7 +301,7 @@
                             encuentran en un contexto de inmersión donde su principal motivación es aprender la lengua y
                             poder comunicarse en situaciones cotidianas y diarias en el país de la lengua meta. Asimismo, en
                             cada una de las actividades propuestas destacan unas destrezas concretas que están detalladas
-                            (indicadas) en la propia actividad
+                            (indicadas) en la propia actividad.
 
                         </el-card>
 
