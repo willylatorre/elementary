@@ -20,7 +20,7 @@
                     </el-icon>20 minutos.</td>
             </tr>
             <tr>
-                <td class="info-grid__header">Tipo de actividad:</td>
+                <td class="info-grid__header">Tipo de actividad</td>
                 <td class="info-grid__cell">Escucha activa, visualización de vídeo y reflexión del léxico.</td>
             </tr>
             <tr>

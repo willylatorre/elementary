@@ -14,7 +14,9 @@ const icons2 = [ElIconSchool, ElIconSchool, ElIconSchool]
                     <span class="high">Salud</span>
                 </h1>
                 <p class="text-dark max-w-[400px] bg-bg hero-sub">
-                    En esta unidad repasamos el léxico relacionado con la salud y el cuerpo.
+                    En esta unidad repasaremos el léxico relacionado con la salud y el cuerpo. Aprenderemos el léxico
+                    adecuado para expresar qué nos duele, a comunicarnos con un profesional de la salud y a entender un
+                    diagnóstico médico.
                 </p>
             </div>
             <div class="hero-img block-img--health">

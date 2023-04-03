@@ -40,12 +40,15 @@
                 enriquecido todo el progreso creativo y productivo
             </p>
             <p>
-                Coincidiendo con la naturaleza online del máster, la organización del trabajo se ha llevado a cabo mediante
+                Coincidiendo con la naturaleza <i>online</i> del máster, la organización del trabajo se ha llevado a cabo
+                mediante
                 aplicaciones de mensajería digital, reuniones por videollamada y documentos de texto compartidos. Todo el
                 contenido del trabajo ha sido concebido, modificado y consensuado durante las sesiones por videoconferencia
-                y por las opciones de comentarios y sugerencias que proporcionan los documentos compartidos. En las mismas
-                se han decidido el tipo de actividades y posteriormente éstas han sido desarrolladas de forma individual por
-                cada una de nosotras como se indica abajo.
+                y por las opciones de comentarios y sugerencias que proporcionan los documentos compartidos. En las
+                reuniones
+                se han decidido el tipo de actividades y posteriormente, estas han sido desarrolladas de forma individual
+                por
+                cada una de nosotras, siempre con la supervisión final del resto del equipo.
             </p>
 
             <p>
@@ -59,7 +62,7 @@
                 <nuxt-link to="/unidad-2#doctor" class="underline">«¿Qué me pasa, doctor?»</nuxt-link>, desarrollada por
                 Ana
                 Aedo. <br /><br /><br />
-                Página web, realizada por Anna
+                Página web realizada por Anna
                 Gallart.
             </p>
 
@@ -341,8 +344,8 @@
                                     <ul class="mt-4">
                                         <li>
                                             <div class="dash"></div><span class="text-primary font-serif text-sm">Actividad
-                                                Cocinamos una
-                                                receta (Ñam Ñam): </span>
+                                                &lt;&lt;Cocinamos una
+                                                receta (Ñam Ñam)&gt;&gt; : </span>
                                             En esta actividad vamos a cocinar una receta típica española. Para ello,
                                             vamos
                                             a
@@ -351,9 +354,9 @@
                                         </li>
                                         <li>
                                             <div class="dash"></div><span class="text-primary font-serif text-sm">Actividad
-                                                Vamos al
+                                                &lt;&lt;Vamos al
                                                 mercado
-                                                (¡Qué rico!): </span>
+                                                (¡Qué rico!)&gt;&gt; : </span>
                                             En esta actividad vamos a ir al mercado y vamos a comprar los ingredientes para
                                             cocinar
                                             la receta. Para ello, vamos a aprender el vocabulario relacionado con las frutas
@@ -379,18 +382,19 @@
                                     <ul class="mt-4">
                                         <li>
                                             <div class="dash"></div><span class="text-primary font-serif text-sm">Actividad
-                                                Me duele todo... :
+                                                &lt;&lt;Me duele todo...&gt;&gt; :
                                             </span>
-                                            En esta actividad vamos a ir al médico y vamos a aprender vocabulario
-                                            relacionado
-                                            con la
-                                            salud y las interacciones.
+                                            En esta actividad vamos a repasar las partes del cuerpo. Además, vamos a
+                                            aprender a expresar qué nos duele y a hacernos un autodiagnóstico. También el
+                                            alumno podrá reconocer los objetos que puede encontrar en un botiquín.
                                         </li>
                                         <li>
                                             <div class="dash"></div><span class="text-primary font-serif text-sm">Actividad
-                                                ¿Qué me pasa, doctor?: </span>
-                                            En esta actividad vamos a aprender vocabulario relacionado con la salud y las
-                                            interacciones.
+                                                &lt;&lt;¿Qué me pasa, doctor?&gt;&gt; : </span>
+                                            En esta actividad vamos a trabajar un diálogo entre una doctora y un paciente.
+                                            También responderemos a preguntas relacionadas con términos médicos,
+                                            enfermedades y síntomas para aprender léxico específico de diferentes áreas de
+                                            la medicina.
                                         </li>
                                     </ul>
                                 </el-card>
@@ -434,5 +438,4 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-</style>
+}</style>

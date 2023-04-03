@@ -17,10 +17,10 @@ const ejercicio = reactive({
     '4': '',
 })
 const answers = reactive({
-    '1': 'moneda',
-    '2': 'radio',
-    '3': 'lapiz',
-    '4': 'rueda',
+    '1': 'Moneda',
+    '2': 'Radio',
+    '3': 'Lápiz',
+    '4': 'Rueda',
 })
 
 const setChoice = (id, choice) => {
@@ -59,7 +59,7 @@ const correctAnswers = computed(() => {
                 <p> <el-icon class="mr-2 top-[2px]">
                         <ElIconEditPen />
                     </el-icon> El chico de los pantalones rojos es Jan. Hoy se ha levantado contento. Ayúdale a repasar las
-                    partes principales de su cuerpo. Escribe en cada recuadro la palabra con correspondiente artículo: la
+                    partes principales de su cuerpo. Escribe en cada recuadro la palabra con su correspondiente artículo: la
                     cabeza, el pie… Podéis hacer el ejercicio en parejas.
                 </p>
 
@@ -80,7 +80,29 @@ const correctAnswers = computed(() => {
 
                 <el-collapse v-model="verSolucion" accordion class="mt-6">
                     <el-collapse-item title="Solución" name="sol">
-                        // Falta la solución
+                        <ul class="columns-2">
+                            <li>1. La mano</li>
+                            <li>2. La muñeca</li>
+                            <li>3. El codo</li>
+                            <li>4. El hombro</li>
+                            <li>5. La cabeza</li>
+                            <li>6. El brazo</li>
+                            <li>7. El pecho</li>
+                            <li>8. La tripa</li>
+                            <li>9. La pierna</li>
+                            <li>10. La espalda</li>
+                            <li>11. El muslo</li>
+                            <li>12. La rodilla</li>
+                            <li>13. El pie</li>
+                            <li>14. El tobillo</li>
+                            <li>15. La frente</li>
+                            <li>16. El ojo</li>
+                            <li>17. La oreja</li>
+                            <li>18. La boca</li>
+                            <li>19. La nariz</li>
+                            <li>20. La barbilla</li>
+                            <li>21. El cuello</li>
+                        </ul>
                     </el-collapse-item>
                 </el-collapse>
 
@@ -151,7 +173,8 @@ const correctAnswers = computed(() => {
                 <p>
                     Jan ha buscado en el botiquín de casa algún remedio para mejorar su malestar. Pero también ha encontrado
                     cosas que no deberían estar allí guardadas. Descubre al intruso que se ha colado en la caja de las
-                    medicinas. Puedes usar el Diccionario esencial de la Lengua Española (RAE) para encontrar el significado
+                    medicinas. Puedes usar el <span class="italic">Diccionario esencial de la Lengua Española (RAE)</span>
+                    para encontrar el significado
                     de las palabras que no conozcas.
                 </p>
 
@@ -176,7 +199,7 @@ const correctAnswers = computed(() => {
                         <el-button @click="setChoice('1', 'pastilla')" type="danger" plain class="mb-4">
                             pastilla
                         </el-button>
-                        <el-button @click="setChoice('1', 'moneda')"
+                        <el-button @click="setChoice('1', 'Moneda')"
                             :type="ejercicio['1'] === answers['1'] ? 'success' : 'danger'" plain class="mb-4">
                             moneda
                         </el-button>
@@ -191,7 +214,7 @@ const correctAnswers = computed(() => {
                         <el-button @click="setChoice('2', 'venda')" type="danger" plain class="mb-4">
                             venda
                         </el-button>
-                        <el-button @click="setChoice('2', 'radio')"
+                        <el-button @click="setChoice('2', 'Radio')"
                             :type="ejercicio['2'] === answers['2'] ? 'success' : 'danger'" plain class="mb-4">
                             radio
                         </el-button>
@@ -202,7 +225,7 @@ const correctAnswers = computed(() => {
                             crema
                         </el-button>
                         <el-button @click="setChoice('2', 'mascarilla')" type="danger" plain>
-                            marcarilla
+                            mascarilla
                         </el-button>
 
                     </div>
@@ -216,7 +239,7 @@ const correctAnswers = computed(() => {
                         <el-button @click="setChoice('3', 'iodo')" type="danger" plain class="mb-4">
                             iodo
                         </el-button>
-                        <el-button @click="setChoice('3', 'lapiz')"
+                        <el-button @click="setChoice('3', 'Lápiz')"
                             :type="ejercicio['3'] === answers['3'] ? 'success' : 'danger'" plain class="mb-4">
                             lápiz
                         </el-button>
@@ -236,7 +259,7 @@ const correctAnswers = computed(() => {
                             alcohol
                         </el-button>
                         <el-button @click="setChoice('4', 'auga')" type="danger" plain class="mb-4">
-                            agua oxigeneada
+                            agua oxigenada
                         </el-button>
                         <el-button @click="setChoice('4', 'gasas')" type="danger" plain class="mb-4">
                             gasas
@@ -244,7 +267,7 @@ const correctAnswers = computed(() => {
                         <el-button @click="setChoice('4', 'esparadrapo')" type="danger" plain class="mb-4">
                             esparadrapo
                         </el-button>
-                        <el-button @click="setChoice('4', 'rueda')"
+                        <el-button @click="setChoice('4', 'Rueda')"
                             :type="ejercicio['4'] === answers['4'] ? 'success' : 'danger'" plain>
                             rueda
                         </el-button>
@@ -257,7 +280,7 @@ const correctAnswers = computed(() => {
                 <el-collapse v-model="verSolucion" accordion class="mt-6">
                     <el-collapse-item title="Solución" name="sol2">
 
-                        Los intrusos son: <br />
+                        Los intrusos son los siguientes: <br />
                         <span v-for="(answer, index) in answers" :key="index" class="mb-2 block">
                             {{ index }}. {{ answer }}
                         </span>

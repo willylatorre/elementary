@@ -40,7 +40,7 @@
             </tr>
             <tr>
                 <td class="info-grid__header">Material</td>
-                <td class="info-grid__cell">Diccionario esencial de la lengua española (RAE, 2006).
+                <td class="info-grid__cell italic">Diccionario esencial de la lengua española (RAE, 2006).
 
                 </td>
             </tr>
@@ -52,8 +52,9 @@
             </tr>
             <tr>
                 <td class="info-grid__header">Estrategias</td>
-                <td class="info-grid__cell">Completar las palabras que faltan en una imagen, correspondencia imagen + texto,
-                    establecer relaciones asociativas.</td>
+                <td class="info-grid__cell">Completar las palabras que faltan en una imagen; establecer la correspondencia
+                    entre imagen y texto; y establecer relaciones asociativas para descubrir al intruso en un conjunto de
+                    elementos.</td>
             </tr>
             <tr>
                 <td class="info-grid__header">Desarrollo</td>
@@ -85,8 +86,10 @@
                     FICHA 3. EN EL BOTIQUÍN. Para terminar nos vamos al botiquín para buscar algún remedio que alivie el
                     dolor y estudiamos qué encontramos allí con una práctica de descubrir al intruso. Se trata de establecer
                     relaciones asociativas por el significado de un grupo de palabras y descubrir al intruso, aquella
-                    palabra que no pertenece al mismo campo léxico que el resto. El alumno puede utilizar el Diccionario
-                    esencial de la Lengua Española (RAE) para encontrar el significado de los términos que no conozca.
+                    palabra que no pertenece al mismo campo léxico que el resto. El alumno puede utilizar el <span
+                        class="italic">Diccionario
+                        esencial de la Lengua Española (RAE)</span> para encontrar el significado de los términos que no
+                    conozca.
                     Tras compartir los resultados, si queda tiempo hablaremos de más objetos que tienen en sus botiquines de
                     casa y así poder ampliar ese vocabulario propuesto
 
