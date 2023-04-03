@@ -8,7 +8,7 @@ const icons2 = [ElIconShoppingCartFull, ElIconShoppingCartFull, ElIconShoppingCa
 <template>
     <div>
         <section class="hero flex flex-col relative">
-            <div class="on-top md:max-w-[640px] hero-content">
+            <div class="on-top lg:max-w-[640px] hero-content">
                 <h1 class="hero-logo">
                     Unidad 1 <br />
                     <span class="high">Comida</span>

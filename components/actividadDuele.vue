@@ -130,17 +130,19 @@ const correctAnswers = computed(() => {
                 <p> Hoy Jan no se encuentra bien. Le duele todo... En parejas, vamos a ayudarle a comunicar qué le pasa.</p>
                 <p>— SÍNTOMAS Y DOLORES. Dentro de la primera serie de palabras, busca su correspondiente imagen
                     relacionada con síntomas y dolores frecuentes.</p>
-                <p> — DIAGNÓSTICOS. Haz tu propio diagnóstico y relaciona la enfermedad con su imagen correspondiente. Es
-                    posible que una fotografía pueda relacionarse con varias enfermedades.</p>
+                <p> — DIAGNÓSTICOS. Haz tu propio diagnóstico y relaciona la enfermedad con su imagen correspondiente.
+                    Cada fotografía puede relacionarse con <strong>2</strong> enfermedades.</p>
                 <p>— DIÁLOGO. Cuando hayas terminado, inicia una conversación con tu compañero para expresar dolor. (¿Qué
                     te pasa? Me duele…). </p>
+
+
+                <DoctorSimptoms />
+
                 <p>Comparte otros dolores o molestias que hayas tenido alguna vez, aparte de los que
                     hemos aprendido ahora, y apuntalos en los recuadros en blanco. Si no conoces la palabra en castellano,
                     puedes utilizar el móvil para buscarla.
                 </p>
 
-
-                <LazyDoctorDnD />
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                     <el-input placeholder="Un síntoma/diagnóstico que conozcas" v-model="item2"
                         @keydown.enter="addItem2(item2)">

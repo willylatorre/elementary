@@ -1,5 +1,4 @@
 <script setup>
-import { useDrop } from 'vue3-dnd'
 
 const images = {
     "1": '/img/dnd1.jpg',
@@ -22,39 +21,22 @@ const props = defineProps({
     },
 })
 
-const [collect, drop] = useDrop(() => ({
-    accept: 'box',
-    drop: (item, monitor) => {
-        console.log(item)
-        props.onDrop(item, monitor)
-    },
-    collect: (monitor) => ({
-        isOver: monitor.isOver(),
-        canDrop: monitor.canDrop(),
-    }),
-}))
-
 
 </script>
 
 <template>
-    <div :ref="drop" role="Dustbin" class="bin" :style="{
-        backgroundImage: `url(${images[props.container]})`,
-        opacity: collect.isOver ? 0.5 : 1,
+    <div role="Dustbin" class="bin" :style="{
+        backgroundImage: `url(${images[props.container]})`
     }">
-
-        <div class="p-4">
-            <el-tag v-for="tag in tags" :key="tag.name" :type="tag.category === '1' ? 'danger' : 'success'">
-                {{ tag.name }}
-            </el-tag>
-        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .bin {
-    height: 180px;
-    width: 190px;
+    height: 250px;
+    width: 250px;
+    max-width: 100%;
+    aspect-ratio: 1/1;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

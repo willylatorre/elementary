@@ -568,8 +568,7 @@ const categories = [
                         <ElIconShoppingCart />
                     </el-icon>Dependiente
                 </el-tag> De nada. Que tengas un buen día y gracias por tu
-                compra
-                . <br />
+                compra. <br />
 
 
 
@@ -643,12 +642,16 @@ const categories = [
                 <table>
                     <thead>
                         <tr>
+                            <th style="min-width:50px">Imagen</th>
                             <th>Palabra en español</th>
                             <th>Palabra en holandés</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            <td>
+                                <img src="/img/fruits-1.png" width="42" class="mx-auto" />
+                            </td>
                             <td>Frambuesa</td>
                             <td>
                                 <el-input v-model="ejercicio2['frambuesa']" placeholder="Palabra en holandés" size="small"
@@ -656,6 +659,9 @@ const categories = [
                             </td>
                         </tr>
                         <tr>
+                            <td>
+                                <img src="/img/fruits-2.png" width="42" class="mx-auto" />
+                            </td>
                             <td>Tomate</td>
                             <td>
                                 <el-input v-model="ejercicio2['tomate']" placeholder="Palabra en holandés" size="small"
@@ -663,6 +669,9 @@ const categories = [
                             </td>
                         </tr>
                         <tr>
+                            <td>
+                                <img src="/img/fruits-3.png" width="42" class="mx-auto" />
+                            </td>
                             <td>Zanahoria</td>
                             <td>
                                 <el-input v-model="ejercicio2['zanahoria']" placeholder="Palabra en holandés" size="small"
@@ -670,6 +679,9 @@ const categories = [
                             </td>
                         </tr>
                         <tr>
+                            <td>
+                                <img src="/img/fruits-4.png" width="42" class="mx-auto" />
+                            </td>
                             <td>Sandía</td>
                             <td>
                                 <el-input v-model="ejercicio2['sandia']" placeholder="Palabra en holandés" size="small"
@@ -677,6 +689,9 @@ const categories = [
                             </td>
                         </tr>
                         <tr>
+                            <td>
+                                <img src="/img/fruits-5.png" width="42" class="mx-auto" />
+                            </td>
                             <td>Manzana</td>
                             <td>
                                 <el-input v-model="ejercicio2['manzana']" placeholder="Palabra en holandés" size="small"
@@ -684,6 +699,9 @@ const categories = [
                             </td>
                         </tr>
                         <tr>
+                            <td>
+                                <img src="/img/fruits-6.png" width="42" class="mx-auto" />
+                            </td>
                             <td>Cebolla</td>
                             <td>
                                 <el-input v-model="ejercicio2['cebolla']" placeholder="Palabra en holandés" size="small"
@@ -691,6 +709,9 @@ const categories = [
                             </td>
                         </tr>
                         <tr>
+                            <td>
+                                <img src="/img/fruits-7.png" width="42" class="mx-auto" />
+                            </td>
                             <td>Pimiento</td>
                             <td>
                                 <el-input v-model="ejercicio2['pimiento']" placeholder="Palabra en holandés" size="small"
@@ -698,6 +719,9 @@ const categories = [
                             </td>
                         </tr>
                         <tr>
+                            <td>
+                                <img src="/img/fruits-8.png" width="42" class="mx-auto" />
+                            </td>
                             <td>Aguacate</td>
                             <td>
                                 <el-input v-model="ejercicio2['aguacate']" placeholder="Palabra en holandés" size="small"
@@ -705,6 +729,9 @@ const categories = [
                             </td>
                         </tr>
                         <tr>
+                            <td>
+                                <img src="/img/fruits-9.png" width="42" class="mx-auto" />
+                            </td>
                             <td>Melón</td>
                             <td>
                                 <el-input v-model="ejercicio2['melon']" placeholder="Palabra en holandés" size="small"
@@ -712,6 +739,9 @@ const categories = [
                             </td>
                         </tr>
                         <tr>
+                            <td>
+                                <img src="/img/fruits-10.png" width="42" class="mx-auto" />
+                            </td>
                             <td>Pera</td>
                             <td>
                                 <el-input v-model="ejercicio2['pera']" placeholder="Palabra en holandés" size="small"
@@ -720,6 +750,8 @@ const categories = [
                         </tr>
                     </tbody>
                 </table>
+                <div class="text-[8px] flex justify-end mt-1">Imágenes de <a class="ml-1 underline"
+                        href="https://www.flaticon.com/packs/healthy-food-and-vegan-2" target="_new">flaticon</a></div>
 
                 <el-collapse v-model="verSolucion" accordion class="mt-6">
                     <el-collapse-item title="Solución" name="sol2">

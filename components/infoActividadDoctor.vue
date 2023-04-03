@@ -43,7 +43,7 @@
                     diferentes enfermedades y/o síntomas.</td>
             </tr>
             <tr>
-                <td class="info-grid__header">Estrategias</td>
+                <td class="info-grid__header">Metodología y materiales</td>
                 <td class="info-grid__cell">Completar un formulario con sus datos personales.<br />
                     Reconocer en un diálogo los diferentes dolores y síntomas.<br />
                     Hablar sobre las propias alergias y/o intolerancias.<br />
@@ -72,4 +72,5 @@
                 </td>
             </tr>
         </tbody>
-</table></template>
+    </table>
+</template>

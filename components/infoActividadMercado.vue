@@ -46,17 +46,25 @@
             </tr>
             <tr>
                 <td class="info-grid__header">Contenidos</td>
-                <td class="info-grid__cell">Competencia léxico - semántica: aprender y repasar el léxico de la comida<br />
+                <td class="info-grid__cell">Competencia léxico - semántica: aprender y repasar el léxico de las frutas y
+                    verduras.<br />
                     Competencia gramatical: repasar la forma del presente.<br /> Concordancia de sustantivos y adjetivos.
                     <br />
-                    Competencia oral
+                    Competencia oral.
                 </td>
             </tr>
             <tr>
-                <td class="info-grid__header">Estrategias</td>
+                <td class="info-grid__header">Metodología</td>
                 <td class="info-grid__cell">Realizar categorización del vocabulario. <br />
-                    Ejercicio de transferencia de su lengua materna. <br />
-                    Inmersión.
+                    Ejercicio de transferencia de lengua materna del estudiante (holandés). <br />
+                    Ejercicio de inmersión en un entorno real.
+                </td>
+            </tr>
+            <tr>
+                <td class="info-grid__header">Materiales</td>
+                <td class="info-grid__cell">
+                    Diálogo creado para esta actividad.<br />
+                    Actividades interactivas creadas para la versión online.
                 </td>
             </tr>
             <tr>
@@ -64,8 +72,8 @@
                 <td class="info-grid__cell">Saludo y rutina de inicio. <br />
                     Se realiza una primera lectura del diálogo por parte de la profesora para facilitar la comprensión.
                     <br />
-                    Los alumnos tienen que identificar y clasificar dieciséis unidades de léxico en cuatro categorías:
-                    frutas, verduras, números/unidades y adjetivos. <br />
+                    Los alumnos tienen que identificar y clasificar veinticuatro unidades de léxico en cuatro categorías:
+                    frutas, verduras, unidades/medidas y adjetivos. <br />
                     Los alumnos hacen un breve ejercicio de transferencia de su lengua materna identificando las palabras
                     similares entre el holandés y el español relacionadas con el léxico aprendido. <br />
                     Los alumnos y la profesora van a un mercado para identificar y practicar un diálogo real en el mercado.

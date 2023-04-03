@@ -44,7 +44,7 @@
                     Competencia gramatical: repaso del número de los sustantivos.</td>
             </tr>
             <tr>
-                <td class="info-grid__header">Estrategias</td>
+                <td class="info-grid__header">Metodología y materiales</td>
                 <td class="info-grid__cell">Vídeo didáctico, técnica cloze.</td>
             </tr>
             <tr>

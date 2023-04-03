@@ -38,12 +38,7 @@
 
                 </td>
             </tr>
-            <tr>
-                <td class="info-grid__header">Material</td>
-                <td class="info-grid__cell italic">Diccionario esencial de la lengua española (RAE, 2006).
 
-                </td>
-            </tr>
             <tr>
                 <td class="info-grid__header">Contenidos</td>
                 <td class="info-grid__cell">Competencia léxico-semántica: léxico relacionado con la salud. <br />
@@ -51,10 +46,16 @@
                     doler en presente de indicativo.</td>
             </tr>
             <tr>
-                <td class="info-grid__header">Estrategias</td>
+                <td class="info-grid__header">Metodología</td>
                 <td class="info-grid__cell">Completar las palabras que faltan en una imagen; establecer la correspondencia
                     entre imagen y texto; y establecer relaciones asociativas para descubrir al intruso en un conjunto de
                     elementos.</td>
+            </tr>
+            <tr>
+                <td class="info-grid__header">Material</td>
+                <td class="info-grid__cell italic">Diccionario esencial de la lengua española (RAE, 2006).
+
+                </td>
             </tr>
             <tr>
                 <td class="info-grid__header">Desarrollo</td>

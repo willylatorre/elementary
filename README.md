@@ -1,42 +1,21 @@
-# Nuxt 3 Minimal Starter
+# Las unidades léxicas en español - Actividad grupal TRIANA
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+ ¡Hola! somos TRIANA, un centro valenciano de enseñanza de
+                    español para extranjeros. Pero, sobre todo, somos un
+                    equipo de cuatro mujeres apasionadas de la cultura y la lengua española que disfrutamos compartiendo,
+                    enseñando y aprendiendo con nuestros estudiantes de todo el mundo.
 
-Make sure to install the dependencies:
 
-```bash
-# yarn
-yarn install
+## Acerca de
 
-# npm
-npm install
+Esta web ha sido creada como actividad grupal de &lt;&lt;Las unidades léxicas en español&gt;&gt; para la asignatura de &lt;&lt;La Competencia Léxica en el Aprendizaje de ELE&gt;&gt;
 
-# pnpm
-pnpm install
-```
+Trabajo realizado por
 
-## Development Server
+- Ana Aedo
+- Anna Gallart
+- Ana Hontangas
+- Ruth Salaverría
 
-Start the development server on http://localhost:3000
 
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

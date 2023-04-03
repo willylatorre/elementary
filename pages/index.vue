@@ -62,52 +62,12 @@
                 <nuxt-link to="/unidad-2#doctor" class="underline">«¿Qué me pasa, doctor?»</nuxt-link>, desarrollada por
                 Ana
                 Aedo. <br /><br /><br />
-                Página web realizada por Anna
+                <a href="https://github.com/willylatorre/triana" class="underline" target="_new">Página web</a> realizada
+                por Anna
                 Gallart.
             </p>
 
-            <!-- <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4 lg:mt-6">
-                <el-card class="profile-card" shadow="hover">
-                    <template #header>
-                        <div class="card-header">
-                            <span class="font-serif font-bold text-primary text-lg">Ana Aedo</span>
-                        </div>
-                    </template>
-                    Falta texto.
 
-                </el-card>
-                <el-card class="profile-card" shadow="hover">
-                    <template #header>
-                        <div class="card-header">
-                            <span class="font-serif font-bold text-primary text-lg">Anna Gallart</span>
-                        </div>
-                    </template>
-                    He realizado la actividad ¡vamos al mercado!. Esta actividad se basa en un diálogo cotidiano de cómo
-                    sería una conversación en un mercado y siempre teniendo en cuenta el perfil de estudiante al que nos
-                    dirigimos.
-                    El objetivo de esta actividad no es solo poner en práctica el léxico aprendido siguiendo las
-                    consideraciones del artículo de José Ramón Gómez Molina, sino también llevarlos a un mercado real donde
-                    deben practicar este tipo de conversación aprovechando que los estudiantes están en inmersión.
-
-                </el-card>
-                <el-card class="profile-card" shadow="hover">
-                    <template #header>
-                        <div class="card-header">
-                            <span class="font-serif font-bold text-primary text-lg">Ana Hontangas</span>
-                        </div>
-                    </template>
-                    Actividad Ñam-Ñam
-                </el-card>
-                <el-card class="profile-card" shadow="hover">
-                    <template #header>
-                        <div class="card-header">
-                            <span class="font-serif font-bold text-primary text-lg">Ruth Salaverría</span>
-                        </div>
-                    </template>
-                    Falta texto
-
-                </el-card>
-            </div> -->
         </section>
 
         <section id="alumnos">
@@ -438,4 +398,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}</style>
+}
+</style>
