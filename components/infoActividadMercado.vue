@@ -69,16 +69,24 @@
             </tr>
             <tr>
                 <td class="info-grid__header">Desarrollo</td>
-                <td class="info-grid__cell">Saludo y rutina de inicio. <br />
-                    Se realiza una primera lectura del diálogo por parte de la profesora para facilitar la comprensión.
-                    <br />
-                    Los alumnos tienen que identificar y clasificar veinticuatro unidades de léxico en cuatro categorías:
-                    frutas, verduras, unidades/medidas y adjetivos. <br />
-                    Los alumnos hacen un breve ejercicio de transferencia de su lengua materna identificando las palabras
-                    similares entre el holandés y el español relacionadas con el léxico aprendido. <br />
-                    Los alumnos y la profesora van a un mercado para identificar y practicar un diálogo real en el mercado.
-                    <br />
-                    Compartir los resultados. <br />
+                <td class="info-grid__cell">Saludo y rutina de inicio. <br /> <br />
+                    Antes de empezar, la profesora realiza una primera lectura del diálogo para facilitar la comprensión y
+                    detectar palabras nuevas.
+                    <br /> <br />
+                    En la primera parte de la actividad, los alumnos tienen que identificar y clasificar veinticuatro
+                    unidades de léxico en cuatro categorías:
+                    frutas, verduras, unidades/medidas y adjetivos. Para ello, han de seleccionar con el cursor las palabras
+                    interactivas del ejercicio y especificar dicha categoría. Esta parte se realiza de forma
+                    individual.<br /> <br />
+                    En la segunda parte, los alumnos hacen un breve ejercicio de transferencia de su lengua materna
+                    identificando las palabras
+                    similares entre el holandés y el español relacionadas con el léxico aprendido. En este apartado, los
+                    alumnos pueden poner en común sus conocimientos e intentar encontrar las palabras de manera conjunta.
+                    <br /> <br />
+                    Finalmente, los alumnos y la profesora van a un mercado (real)
+                    para poner en práctica todo lo aprendido. En esta actividad la profesora ayuda a los alumnos a
+                    seleccionar las palabras y a expresarse en el mercado, prestando especial atención en la pronunciación y
+                    entonación del léxico.
                 </td>
             </tr>
         </tbody>

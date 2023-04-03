@@ -35,8 +35,8 @@
             <div>Ana Hontangas</div>
             <div>Ruth Salaverría</div>
 
-            <div class="text-xs text-grey mt-4 text-center">Todos los derechos del contenido de la página web reservados.
-                <a href="https://github.com/willylatorre/triana">Código fuente </a><br />
+            <div class="text-xs text-grey mt-4 text-center">Todos los derechos del contenido de la página web reservados
+                (<a href="https://github.com/willylatorre/triana" class="underline">ver código fuente</a>).<br />
                 <br /> La fuente de todas las
                 imágenes, si no
                 se especifica lo
