@@ -62,7 +62,7 @@
                 <nuxt-link to="/unidad-2#doctor" class="underline">«¿Qué me pasa, doctor?»</nuxt-link>, desarrollada por
                 Ana
                 Aedo. <br /><br /><br />
-                <a href="https://github.com/willylatorre/triana" class="underline" target="_new">Página web</a> realizada
+                Página web realizada
                 por Anna
                 Gallart.
             </p>
