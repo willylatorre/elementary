@@ -429,7 +429,7 @@ const categories = [
                     <el-icon class="top-[2px] mr-1">
                         <ElIconUser />
                     </el-icon>Cliente
-                </el-tag> Quiero comprar <el-popover placement="bottom" :width="200" trigger="click">
+                </el-tag>Estupendo. Entonces, ponme <el-popover placement="bottom" :width="200" trigger="click">
                     <template #reference>
                         <el-button class="fake-button" :class="{
                             'fake-button--dark': !ejercicio['tres']
