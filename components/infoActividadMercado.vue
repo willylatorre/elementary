@@ -29,13 +29,13 @@
             <tr>
                 <td class="info-grid__header">Objetivo</td>
                 <td class="info-grid__cell">
-                    Consolidar el léxico aprendido en la actividad anterior<br />
-                    Ampliar nuevo léxico de la alimentación<br />
-                    Practicar el léxico de la comida en la expresión oral<br />
+                    Consolidar el léxico aprendido en la actividad anterior.<br />
+                    Ampliar nuevo léxico de la alimentación.<br />
+                    Practicar el léxico de la comida en la expresión oral.<br />
                     Presentación inicial de las fórmulas de saludo y las fórmulas rutinarias, que se desarrollarán en
-                    futuras clases<br />
-                    Comprender y asimilar un diálogo sencillo<br />
-                    Inmersión en una situacion real<br />
+                    futuras clases.<br />
+                    Comprender y asimilar un diálogo sencillo.<br />
+                    Inmersión en una situacion real.<br />
                 </td>
             </tr>
             <tr>
