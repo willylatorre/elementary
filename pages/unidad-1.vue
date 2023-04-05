@@ -43,7 +43,7 @@ const icons2 = [ElIconShoppingCartFull, ElIconShoppingCartFull, ElIconShoppingCa
         <section class="mt-10" id="mercado">
             <h4 class="bg-bg rounded-br-xl pr-3 pb-3 max-w-[520px]">
                 actividad <br />
-                <span class="high">¡NOS VAMOS AL MERCADO!</span>
+                <span class="high">¡VAMOS AL MERCADO!</span>
             </h4>
 
             <img src="../assets/img/photo2.jpg" class="inline-img" alt="cooking" />

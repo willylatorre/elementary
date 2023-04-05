@@ -52,7 +52,7 @@
             </p>
 
             <p>
-                <nuxt-link to="/unidad-1#mercado" class="underline">«¡Nos vamos al mercado!»</nuxt-link>, desarrollada por
+                <nuxt-link to="/unidad-1#mercado" class="underline">«Vamos al mercado»</nuxt-link>, desarrollada por
                 Anna Gallart.
                 <br />
                 <nuxt-link to="/unidad-1#receta" class="underline">«Ñam-Ñam»</nuxt-link>, desarrollada por Ana
@@ -316,7 +316,7 @@
                                             <div class="dash"></div><span class="text-primary font-serif text-sm">Actividad
                                                 &lt;&lt;Vamos al
                                                 mercado
-                                                (¡Qué rico!)&gt;&gt; : </span>
+                                                &gt;&gt; : </span>
                                             En esta actividad vamos a ir al mercado y vamos a comprar los ingredientes para
                                             cocinar
                                             la receta. Para ello, vamos a aprender el vocabulario relacionado con las frutas

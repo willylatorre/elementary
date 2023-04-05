@@ -7,7 +7,7 @@
         <tbody>
             <tr>
                 <td class="info-grid__header">Título</td>
-                <td class="info-grid__cell">¡Nos vamos al mercado!</td>
+                <td class="info-grid__cell">¡Vamos al mercado!</td>
             </tr>
             <tr>
                 <td class="info-grid__header">Autor</td>
